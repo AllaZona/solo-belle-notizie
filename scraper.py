@@ -2,6 +2,7 @@ import feedparser
 import json
 import random
 import re
+import html
 import urllib.request
 import urllib.parse
 from datetime import datetime, timedelta, timezone
@@ -102,13 +103,11 @@ def assegna_categoria(testo):
     return "Mondo"
 
 def traduci_testo_sicuro(testo, lingua_origine):
-    if lingua_origine == 'it': 
+    if not testo or lingua_origine == 'it': 
         return testo
     
-    # 1. API MyMemory Autenticata tramite Email (Quota dedicata per prevenire il blocco)
     try:
         testo_codificato = urllib.parse.quote(testo)
-        # Sostituita la richiesta anonima con una contenente l'indirizzo email
         url = f"https://api.mymemory.translated.net/get?q={testo_codificato}&langpair={lingua_origine}|it&de=belle.notizie.app@gmail.com"
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
         response = urllib.request.urlopen(req, timeout=10)
@@ -116,19 +115,17 @@ def traduci_testo_sicuro(testo, lingua_origine):
         
         if data['responseStatus'] == 200:
             traduzione = data['responseData']['translatedText']
-            # Assicura che la traduzione non sia un messaggio d'errore della piattaforma
             if traduzione and "MYMEMORY WARNING" not in traduzione:
                 return traduzione
     except Exception as e:
-        print(f"Errore traduzione MyMemory: {e}")
+        pass
 
-    # 2. Tentativo secondario con GoogleTranslator
     try:
         trad = GoogleTranslator(source='auto', target='it').translate(testo)
         if trad and "Error 500" not in trad: 
             return trad
     except Exception as e:
-        print(f"Errore traduzione Google: {e}")
+        pass
         
     return testo
 
@@ -142,6 +139,16 @@ def estrai_immagine(entry):
             if 'type' in enclosure and enclosure['type'].startswith('image/'):
                 return enclosure['href']
     return None
+
+def pulisci_anteprima(testo):
+    if not testo: return ""
+    # Rimuove tutti i tag HTML (es. <div>, <p>, <img>, <a>)
+    testo_pulito = re.sub(r'<[^>]+>', '', testo)
+    # Converte le entità speciali (es. &quot; in ")
+    testo_pulito = html.unescape(testo_pulito)
+    # Rimuove gli spazi in eccesso all'inizio e alla fine
+    testo_pulito = testo_pulito.strip()
+    return testo_pulito
 
 print("Inizio scansione feed...")
 notizie_filtrate = []
@@ -168,11 +175,21 @@ for feed_info in FEEDS:
                     pass
 
             if analizza_notizia(titolo_originale, feed_info['lingua']):
+                # Traduce il titolo
                 titolo_tradotto = traduci_testo_sicuro(titolo_originale, feed_info['lingua'])
                 categoria = assegna_categoria(titolo_tradotto)
+                sleep(1) # Breve pausa API
                 
-                # Pausa di 2 secondi per ogni singola traduzione per prevenire i blocchi anti-bot
-                sleep(2)
+                # Estrae, pulisce e taglia il sommario (anteprima) a massimo 160 caratteri
+                sommario_originale = entry.get('summary', entry.get('description', ''))
+                sommario_pulito = pulisci_anteprima(sommario_originale)
+                if len(sommario_pulito) > 160:
+                    sommario_pulito = sommario_pulito[:157] + "..."
+                
+                # Traduce l'anteprima se necessario
+                sommario_tradotto = traduci_testo_sicuro(sommario_pulito, feed_info['lingua'])
+                if feed_info['lingua'] != 'it': 
+                    sleep(1.5) # Pausa API se c'è stata una traduzione
                 
                 immagine = estrai_immagine(entry)
                 if not immagine: immagine = random.choice(IMMAGINI_FALLBACK)
@@ -183,7 +200,8 @@ for feed_info in FEEDS:
                     "fonte": feed_info['nome'],
                     "immagine": immagine,
                     "data": data_formattata,
-                    "categoria": categoria
+                    "categoria": categoria,
+                    "sommario": sommario_tradotto # Aggiunta del nuovo dato
                 })
                 link_visti.add(link)
     except Exception as e:
