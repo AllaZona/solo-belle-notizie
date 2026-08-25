@@ -1,0 +1,28 @@
+name: Aggiorna Notizie
+on:
+  schedule:
+    - cron: '0 */6 * * *' # Si avvia ogni 6 ore
+  workflow_dispatch: # Ti permette di avviarlo anche manualmente con un click
+
+jobs:
+  aggiorna:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.10'
+      - name: Installa Feedparser
+        run: pip install feedparser
+      - name: Cerca le notizie
+        run: python scraper.py
+      - name: Salva sul sito
+        run: |
+          git config user.name "Robot Notizie"
+          git config user.email "action@github.com"
+          git add notizie.json
+          git commit -m "Aggiornate notizie positive" || exit 0
+          git push
