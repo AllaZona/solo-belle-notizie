@@ -3,42 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Solo Belle Notizie</title>
+    <title>Solo Belle Notizie - La tua oasi felice</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
     <style>
         :root {
-            --text-main: #0f172a;
-            --text-muted: #475569;
-            --card-bg: rgba(255, 255, 255, 0.95);
-            --accent: #0ea5e9;
-            --accent-hover: #0284c7;
+            --text-main: #4a4a4a;
+            --card-bg: rgba(255, 255, 255, 0.92);
+            --accent: #ff8fab;
+            --accent-hover: #ff5c8a;
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; }
 
+        /* Sfondo rilassante caldo */
         body { 
-            font-family: 'Inter', sans-serif; 
+            font-family: 'Nunito', sans-serif; 
             color: var(--text-main); 
-            line-height: 1.5;
-            padding: 0 20px 60px;
+            line-height: 1.6;
+            padding: 0 20px 80px;
             margin: 0;
             min-height: 100vh;
-        }
-
-        /* Sfondo animato */
-        .bg-animation {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            background: linear-gradient(-45deg, #a1c4fd, #c2e9fb, #fbc2eb, #e6dee9);
+            background: linear-gradient(-45deg, #fbc2eb, #a6c1ee, #fcd3d1, #e3fdf5);
             background-size: 400% 400%;
-            animation: gradientBG 15s ease infinite;
-            overflow: hidden;
+            animation: gradientBG 20s ease infinite;
+            overflow-x: hidden;
         }
 
         @keyframes gradientBG {
@@ -47,163 +37,93 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Bolle fluttuanti */
-        .bubbles {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
+        /* Emojis fluttuanti gioiose */
+        .emoji-bubbles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
+        .emoji-bubbles li {
+            position: absolute; list-style: none; display: block;
+            font-size: 2.5rem; bottom: -100px; animation: floatUp 25s infinite linear; opacity: 0.6;
+        }
+        .emoji-bubbles li:nth-child(1) { left: 10%; animation-delay: 0s; font-size: 3rem; }
+        .emoji-bubbles li:nth-child(2) { left: 25%; animation-delay: 5s; animation-duration: 20s; }
+        .emoji-bubbles li:nth-child(3) { left: 45%; animation-delay: 2s; }
+        .emoji-bubbles li:nth-child(4) { left: 60%; animation-delay: 8s; animation-duration: 18s; font-size: 4rem; }
+        .emoji-bubbles li:nth-child(5) { left: 80%; animation-delay: 0s; font-size: 2rem; }
+        .emoji-bubbles li:nth-child(6) { left: 90%; animation-delay: 12s; animation-duration: 22s; }
+
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { transform: translateY(-1200px) rotate(360deg); opacity: 0; }
         }
 
-        .bubbles li {
-            position: absolute;
-            list-style: none;
-            display: block;
-            width: 40px;
-            height: 40px;
-            background-color: rgba(255, 255, 255, 0.3);
-            bottom: -160px;
-            animation: square 25s infinite linear;
-            border-radius: 50%;
-        }
-
-        .bubbles li:nth-child(1) { left: 10%; width: 80px; height: 80px; animation-delay: 0s; }
-        .bubbles li:nth-child(2) { left: 20%; width: 30px; height: 30px; animation-delay: 2s; animation-duration: 17s; }
-        .bubbles li:nth-child(3) { left: 25%; animation-delay: 4s; }
-        .bubbles li:nth-child(4) { left: 40%; width: 60px; height: 60px; animation-delay: 0s; animation-duration: 18s; }
-        .bubbles li:nth-child(5) { left: 70%; width: 20px; height: 20px; animation-delay: 0s; }
-        .bubbles li:nth-child(6) { left: 80%; width: 120px; height: 120px; animation-delay: 3s; background-color: rgba(255, 255, 255, 0.2); }
-        .bubbles li:nth-child(7) { left: 32%; width: 160px; height: 160px; animation-delay: 7s; }
-        .bubbles li:nth-child(8) { left: 55%; width: 20px; height: 20px; animation-delay: 15s; animation-duration: 40s; }
-        .bubbles li:nth-child(9) { left: 25%; width: 10px; height: 10px; animation-delay: 2s; animation-duration: 40s; background-color: rgba(255, 255, 255, 0.3); }
-        .bubbles li:nth-child(10) { left: 90%; width: 160px; height: 160px; animation-delay: 11s; }
-
-        @keyframes square {
-            0% { transform: translateY(0) scale(1); opacity: 1; }
-            100% { transform: translateY(-1000px) scale(1.5); opacity: 0; }
-        }
-
-        header { text-align: center; padding: 60px 20px 40px; max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
-        h1 { font-weight: 800; font-size: 2.8rem; color: var(--text-main); margin-bottom: 8px; letter-spacing: -0.025em; }
+        header { text-align: center; padding: 50px 20px 20px; max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
+        h1 { font-weight: 800; font-size: 3rem; color: #333; margin-bottom: 8px; }
         h1 span { color: var(--accent); }
-        .subtitle { color: var(--text-muted); font-size: 1.15rem; font-weight: 600; margin-bottom: 12px; }
-        .quote { color: var(--text-muted); font-size: 1rem; font-style: italic; background: rgba(255,255,255,0.6); display: inline-block; padding: 8px 16px; border-radius: 20px;}
+        .quote { color: #fff; font-size: 1.2rem; font-weight: 800; background: rgba(255, 143, 171, 0.85); display: inline-block; padding: 12px 24px; border-radius: 30px; box-shadow: 0 4px 15px rgba(255, 143, 171, 0.4); margin-bottom: 20px;}
+        
+        /* Zona relax (Cerchio del respiro) */
+        .zen-zone { background: rgba(255, 255, 255, 0.7); border-radius: 20px; padding: 20px; max-width: 600px; margin: 0 auto 40px auto; text-align: center; backdrop-filter: blur(5px); }
+        .breathe-text { font-size: 1.1rem; color: #666; font-weight: 600; margin-top: 10px; }
+        .curiosity-box { margin-top: 15px; font-size: 0.95rem; color: #0284c7; background: #e0f2fe; padding: 12px; border-radius: 12px; }
 
-        #contenitore-notizie {
-            display: grid;
-            grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-            gap: 24px;
-            max-width: 1200px;
-            margin: 0 auto;
-            position: relative;
-            z-index: 1;
-        }
+        #contenitore-notizie { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
 
         .notizia { 
-            background: var(--card-bg); 
-            border-radius: 16px; 
-            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -4px rgba(0, 0, 0, 0.05);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex;
-            flex-direction: column;
-            border: 1px solid rgba(255,255,255,0.4);
-            overflow: hidden;
-            backdrop-filter: blur(10px);
+            background: var(--card-bg); border-radius: 24px; 
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;
+            display: flex; flex-direction: column; border: 2px solid transparent; overflow: hidden; backdrop-filter: blur(10px);
         }
+        .notizia:hover { transform: translateY(-8px); border: 2px solid var(--accent); box-shadow: 0 15px 30px rgba(255, 143, 171, 0.2); }
 
-        .notizia:hover {
-            transform: translateY(-6px);
-            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 8px 10px -6px rgba(0, 0, 0, 0.1);
-        }
-
-        .immagine-notizia {
-            width: 100%;
-            height: 180px;
-            object-fit: cover;
-            background-color: #e2e8f0;
-            border-bottom: 1px solid rgba(0,0,0,0.05);
-        }
-
-        .notizia-content {
-            padding: 24px;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            flex-grow: 1;
-        }
+        .immagine-notizia { width: 100%; height: 190px; object-fit: cover; }
+        .notizia-content { padding: 24px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; }
 
         .fonte { 
-            display: inline-block; 
-            background-color: #e0f2fe; 
-            color: #0369a1; 
-            font-size: 0.75rem; 
-            text-transform: uppercase;
-            letter-spacing: 0.05em;
-            padding: 6px 12px; 
-            border-radius: 20px; 
-            margin-bottom: 16px; 
-            font-weight: 700;
-            align-self: flex-start;
+            display: inline-block; background-color: #fef08a; color: #854d0e; font-size: 0.8rem; 
+            text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 14px; border-radius: 20px; margin-bottom: 16px; font-weight: 800; align-self: flex-start;
         }
 
-        .titolo-link { 
-            color: var(--text-main); 
-            text-decoration: none; 
-            font-size: 1.15rem; 
-            font-weight: 700;
-            display: block;
-            margin-bottom: 24px;
-        }
+        .titolo-link { color: var(--text-main); text-decoration: none; font-size: 1.2rem; font-weight: 800; display: block; margin-bottom: 24px; }
+        .titolo-link:hover { color: var(--accent-hover); }
 
-        .titolo-link:hover { color: var(--accent); }
-
-        .leggi-tutto {
-            font-size: 0.875rem;
-            color: var(--accent);
-            font-weight: 700;
-            text-decoration: none;
-            display: flex;
-            align-items: center;
-            gap: 4px;
-        }
-
+        .leggi-tutto { font-size: 0.9rem; color: var(--accent); font-weight: 800; text-decoration: none; display: flex; align-items: center; gap: 4px; }
         .leggi-tutto:hover { color: var(--accent-hover); }
-        .loader { text-align: center; color: var(--text-main); font-weight: bold; grid-column: 1 / -1; padding: 40px; }
+        .loader { text-align: center; color: var(--text-main); font-weight: bold; grid-column: 1 / -1; padding: 40px; font-size: 1.2rem;}
     </style>
 </head>
 <body>
-    <div class="bg-animation">
-        <ul class="bubbles">
-            <li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li><li></li>
-        </ul>
-    </div>
+    <ul class="emoji-bubbles">
+        <li>🌸</li><li>🍀</li><li>☀️</li><li>🦋</li><li>🌻</li><li>✨</li>
+    </ul>
 
     <header>
         <h1>Solo <span>Belle</span> Notizie</h1>
-        <p class="subtitle">L'aggregatore automatico di positività degli ultimi 7 giorni.</p>
-        <p class="quote" id="citazione-giornaliera">Caricamento in corso...</p>
+        <p class="quote" id="citazione-giornaliera">Caricamento in corso... ✨</p>
     </header>
+
+    <div class="zen-zone">
+        <p class="breathe-text">Benvenuto nel tuo spazio sicuro e rilassante. Prenditi un momento per te.</p>
+        <div class="curiosity-box" id="curiosita-giornaliera">💡 Preparando una curiosità felice...</div>
+    </div>
     
     <div id="contenitore-notizie">
-        <div class="loader">Ricerca delle notizie in corso...</div>
+        <div class="loader">Cerco le notizie più belle per te... 🌻</div>
     </div>
 
     <script>
         fetch('notizie.json')
             .then(response => response.json())
             .then(dati => {
-                
-                if (dati.citazione) {
-                    document.getElementById('citazione-giornaliera').innerText = dati.citazione;
-                }
+                if (dati.citazione) document.getElementById('citazione-giornaliera').innerText = dati.citazione;
+                if (dati.curiosita) document.getElementById('curiosita-giornaliera').innerHTML = "💡 <b>Lo sapevi?</b> " + dati.curiosita;
 
                 const arrayNotizie = Array.isArray(dati) ? dati : dati.notizie;
                 const contenitore = document.getElementById('contenitore-notizie');
                 contenitore.innerHTML = '';
                 
                 if(!arrayNotizie || arrayNotizie.length === 0) {
-                    contenitore.innerHTML = '<div class="loader">Nessuna notizia positiva trovata negli ultimi 7 giorni. Riprova più tardi.</div>';
+                    contenitore.innerHTML = '<div class="loader">Nessuna nuova notizia positiva trovata al momento. Goditi questa giornata meravigliosa! 🌈</div>';
                     return;
                 }
 
@@ -227,8 +147,8 @@
                 });
             })
             .catch(error => {
-                document.getElementById('contenitore-notizie').innerHTML = '<div class="loader">Impossibile caricare le notizie.</div>';
-                document.getElementById('citazione-giornaliera').innerText = '';
+                document.getElementById('contenitore-notizie').innerHTML = '<div class="loader">Impossibile caricare le notizie in questo momento. 🌸</div>';
+                document.getElementById('citazione-giornaliera').innerText = 'Respira e rilassati.';
             });
     </script>
 </body>
