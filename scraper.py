@@ -1,6 +1,7 @@
 import feedparser
 import json
 import urllib.parse
+import random
 from datetime import datetime, timedelta, timezone
 from time import mktime, sleep
 from deep_translator import GoogleTranslator
@@ -10,7 +11,6 @@ print("Caricamento modello NLP in corso...")
 sentiment_analyzer = pipeline("sentiment-analysis", model="nlptown/bert-base-multilingual-uncased-sentiment")
 
 FEEDS = [
-    # ITALIA
     {"nome": "ANSA", "url": "https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml", "lingua": "it"},
     {"nome": "Corriere della Sera", "url": "https://xml2.corriereobjects.it/rss/homepage.xml", "lingua": "it"},
     {"nome": "Repubblica", "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml", "lingua": "it"},
@@ -22,8 +22,6 @@ FEEDS = [
     {"nome": "Il Post", "url": "https://www.ilpost.it/feed/", "lingua": "it"},
     {"nome": "Wired Italia", "url": "https://www.wired.it/feed/rss", "lingua": "it"},
     {"nome": "AGI", "url": "https://www.agi.it/rss", "lingua": "it"},
-
-    # EUROPA E MONDO
     {"nome": "BBC News", "url": "http://feeds.bbci.co.uk/news/world/rss.xml", "lingua": "en"},
     {"nome": "The Guardian", "url": "https://www.theguardian.com/world/rss", "lingua": "en"},
     {"nome": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "lingua": "en"},
@@ -33,6 +31,18 @@ FEEDS = [
     {"nome": "Le Monde", "url": "https://www.lemonde.fr/international/rss_full.xml", "lingua": "fr"},
     {"nome": "El Pais", "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada", "lingua": "es"},
     {"nome": "Der Spiegel", "url": "https://www.spiegel.de/international/index.rss", "lingua": "en"}
+]
+
+CITAZIONI = [
+    "Tieni il viso rivolto verso il sole e non potrai mai vedere le ombre. (Helen Keller)",
+    "Il momento migliore per piantare un albero era 20 anni fa. Il secondo momento migliore è adesso.",
+    "Sii il cambiamento che vuoi vedere nel mondo. (Mahatma Gandhi)",
+    "Ogni giorno è una nuova opportunità per cambiare le cose.",
+    "La felicità non è qualcosa di pronto all'uso. Deriva dalle tue azioni. (Dalai Lama)",
+    "L'ottimismo è la fede che porta al successo.",
+    "Non si è mai troppo vecchi per fissare un nuovo obiettivo o per sognare un nuovo sogno. (C.S. Lewis)",
+    "Il pensiero positivo ti permetterà di fare ogni cosa meglio del pensiero negativo. (Zig Ziglar)",
+    "La vita è il 10% ciò che ti accade e il 90% come reagisci. (Charles R. Swindoll)"
 ]
 
 def analizza_notizia_nlp(testo):
@@ -85,16 +95,14 @@ for feed_info in FEEDS:
                 if feed_info['lingua'] != 'it':
                     try:
                         traduzione = GoogleTranslator(source='auto', target='it').translate(titolo_originale)
-                        # Controllo validità traduzione
                         if traduzione and "Error 500" not in traduzione and "<html" not in traduzione.lower():
                             titolo_da_salvare = traduzione
-                        sleep(1) # Pausa per non bloccare i server di Google
+                        sleep(1)
                     except Exception as e:
                         print(f"Errore di traduzione: {e}")
                 
                 immagine = estrai_immagine(entry)
                 
-                # Se non c'è l'immagine originale, ne creiamo una pertinente con l'AI
                 if not immagine:
                     titolo_codificato = urllib.parse.quote(titolo_da_salvare)
                     immagine = f"https://image.pollinations.ai/prompt/notizia,%20{titolo_codificato}?width=800&height=400&nologo=true"
@@ -109,7 +117,13 @@ for feed_info in FEEDS:
     except Exception as e:
         print(f"Errore durante l'elaborazione di {feed_info['nome']}: {e}")
 
+# Salvataggio dati finali con citazione inclusa
+dati_finali = {
+    "citazione": random.choice(CITAZIONI),
+    "notizie": notizie_filtrate
+}
+
 with open('notizie.json', 'w', encoding='utf-8') as f:
-    json.dump(notizie_filtrate, f, ensure_ascii=False, indent=2)
+    json.dump(dati_finali, f, ensure_ascii=False, indent=2)
 
 print(f"Scansione terminata. Notizie raccolte: {len(notizie_filtrate)}")
