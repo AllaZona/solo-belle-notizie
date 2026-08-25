@@ -3,6 +3,7 @@ import json
 import random
 import re
 import html
+import os
 import urllib.request
 import urllib.parse
 from datetime import datetime, timedelta, timezone
@@ -142,18 +143,40 @@ def estrai_immagine(entry):
 
 def pulisci_anteprima(testo):
     if not testo: return ""
-    # Rimuove tutti i tag HTML (es. <div>, <p>, <img>, <a>)
     testo_pulito = re.sub(r'<[^>]+>', '', testo)
-    # Converte le entità speciali (es. &quot; in ")
     testo_pulito = html.unescape(testo_pulito)
-    # Rimuove gli spazi in eccesso all'inizio e alla fine
     testo_pulito = testo_pulito.strip()
     return testo_pulito
 
 print("Inizio scansione feed...")
-notizie_filtrate = []
+notizie_salvate = []
 link_visti = set()
 limite_temporale = datetime.now(timezone.utc) - timedelta(days=7)
+
+if os.path.exists('notizie.json'):
+    try:
+        with open('notizie.json', 'r', encoding='utf-8') as f:
+            dati_salvati = json.load(f)
+            lista_vecchia = dati_salvati.get('notizie', []) if isinstance(dati_salvati, dict) else dati_salvati
+            
+            for notiz in lista_vecchia:
+                data_str = notiz.get('data', 'Data sconosciuta')
+                mantieni = True
+                if data_str != 'Data sconosciuta':
+                    try:
+                        dt_notizia = datetime.strptime(data_str, "%d/%m/%Y").replace(tzinfo=timezone.utc)
+                        if dt_notizia < limite_temporale:
+                            mantieni = False
+                    except Exception:
+                        pass
+                
+                if mantieni:
+                    notizie_salvate.append(notiz)
+                    link_visti.add(notiz.get('link', ''))
+    except Exception as e:
+        print(f"Impossibile leggere il file precedente: {e}")
+
+nuove_notizie = []
 
 for feed_info in FEEDS:
     try:
@@ -175,43 +198,44 @@ for feed_info in FEEDS:
                     pass
 
             if analizza_notizia(titolo_originale, feed_info['lingua']):
-                # Traduce il titolo
                 titolo_tradotto = traduci_testo_sicuro(titolo_originale, feed_info['lingua'])
                 categoria = assegna_categoria(titolo_tradotto)
-                sleep(1) # Breve pausa API
+                sleep(1)
                 
-                # Estrae, pulisce e taglia il sommario (anteprima) a massimo 160 caratteri
                 sommario_originale = entry.get('summary', entry.get('description', ''))
                 sommario_pulito = pulisci_anteprima(sommario_originale)
                 if len(sommario_pulito) > 160:
                     sommario_pulito = sommario_pulito[:157] + "..."
                 
-                # Traduce l'anteprima se necessario
                 sommario_tradotto = traduci_testo_sicuro(sommario_pulito, feed_info['lingua'])
                 if feed_info['lingua'] != 'it': 
-                    sleep(1.5) # Pausa API se c'è stata una traduzione
+                    sleep(1.5)
                 
                 immagine = estrai_immagine(entry)
                 if not immagine: immagine = random.choice(IMMAGINI_FALLBACK)
                 
-                notizie_filtrate.append({
+                nuove_notizie.append({
                     "titolo": titolo_tradotto,
                     "link": link,
                     "fonte": feed_info['nome'],
                     "immagine": immagine,
                     "data": data_formattata,
                     "categoria": categoria,
-                    "sommario": sommario_tradotto # Aggiunta del nuovo dato
+                    "sommario": sommario_tradotto
                 })
                 link_visti.add(link)
     except Exception as e:
         print(f"Errore su feed {feed_info['nome']}: {e}")
 
+notizie_totali = nuove_notizie + notizie_salvate
+
 dati_finali = {
     "citazione": random.choice(CITAZIONI),
     "curiosita": random.choice(CURIOSITA),
-    "notizie": notizie_filtrate
+    "notizie": notizie_totali
 }
 
 with open('notizie.json', 'w', encoding='utf-8') as f:
     json.dump(dati_finali, f, ensure_ascii=False, indent=2)
+
+print(f"Scansione terminata. Nuove notizie: {len(nuove_notizie)}. Notizie totali in memoria: {len(notizie_totali)}")
