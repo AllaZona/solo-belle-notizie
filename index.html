@@ -28,6 +28,7 @@
             background-size: 400% 400%;
             animation: gradientBG 20s ease infinite;
             overflow-x: hidden;
+            cursor: pointer; /* Invita l'utente a cliccare in giro */
         }
 
         @keyframes gradientBG {
@@ -71,11 +72,31 @@
         .notizia { 
             background: var(--card-bg); border-radius: 24px; 
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;
-            display: flex; flex-direction: column; border: 2px solid transparent; overflow: hidden; backdrop-filter: blur(10px);
+            display: flex; flex-direction: column; border: 2px solid transparent; backdrop-filter: blur(10px);
+            position: relative; /* Necessario per l'unicorno curioso */
         }
-        .notizia:hover { transform: translateY(-8px); border: 2px solid var(--accent); box-shadow: 0 15px 30px rgba(255, 143, 171, 0.2); }
+        
+        .notizia:hover { transform: translateY(-8px); border: 2px solid var(--accent); box-shadow: 0 15px 30px rgba(255, 143, 171, 0.2); z-index: 2;}
 
-        .immagine-notizia { width: 100%; height: 190px; object-fit: cover; }
+        /* L'Unicorno Curioso che fa capolino */
+        .notizia::before {
+            content: '🦄';
+            position: absolute;
+            top: -10px;
+            right: 25px;
+            font-size: 3.5rem;
+            opacity: 0;
+            transform: translateY(30px) rotate(25deg);
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            z-index: -1; /* Nasconde l'unicorno dietro la scheda */
+            pointer-events: none;
+        }
+        .notizia:hover::before {
+            opacity: 1;
+            transform: translateY(-45px) rotate(-10deg);
+        }
+
+        .immagine-notizia { width: 100%; height: 190px; object-fit: cover; border-top-left-radius: 22px; border-top-right-radius: 22px;}
         .notizia-content { padding: 24px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; }
         
         .meta-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
@@ -92,6 +113,26 @@
         .leggi-tutto { font-size: 0.9rem; color: var(--accent); font-weight: 800; text-decoration: none; display: flex; align-items: center; gap: 4px; }
         .leggi-tutto:hover { color: var(--accent-hover); }
         .loader { text-align: center; color: var(--text-main); font-weight: bold; grid-column: 1 / -1; padding: 40px; font-size: 1.2rem;}
+
+        /* Animazioni dell'Unicorno al Click */
+        .magia-unicorno {
+            position: fixed; font-size: 2.5rem; pointer-events: none; z-index: 9999;
+            animation: gallop 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+        }
+        .magia-scintilla {
+            position: fixed; font-size: 1.5rem; pointer-events: none; z-index: 9998;
+            animation: sparkle 0.8s ease-out forwards;
+        }
+
+        @keyframes gallop {
+            0% { opacity: 1; transform: translate(-50%, -50%) scale(0.5); }
+            50% { transform: translate(30px, -80px) scale(1.2) rotate(-15deg); }
+            100% { opacity: 0; transform: translate(120px, -180px) scale(1) rotate(-35deg); }
+        }
+        @keyframes sparkle {
+            0% { opacity: 1; transform: translate(-50%, -50%) scale(0.5) rotate(0deg); }
+            100% { opacity: 0; transform: translate(-40px, 40px) scale(1.5) rotate(180deg); }
+        }
     </style>
 </head>
 <body>
@@ -203,6 +244,31 @@
                 `;
             });
         }
+
+        // --- MAGIA INTERATTIVA AL CLICK ---
+        document.addEventListener('click', function(e) {
+            // Crea l'unicorno
+            const unicorno = document.createElement('div');
+            unicorno.className = 'magia-unicorno';
+            unicorno.innerText = '🦄';
+            unicorno.style.left = e.clientX + 'px';
+            unicorno.style.top = e.clientY + 'px';
+            document.body.appendChild(unicorno);
+
+            // Crea la scintilla
+            const scintilla = document.createElement('div');
+            scintilla.className = 'magia-scintilla';
+            scintilla.innerText = '✨';
+            scintilla.style.left = e.clientX + 'px';
+            scintilla.style.top = e.clientY + 'px';
+            document.body.appendChild(scintilla);
+
+            // Rimuove gli elementi dal DOM dopo l'animazione per non rallentare il sito
+            setTimeout(() => {
+                unicorno.remove();
+                scintilla.remove();
+            }, 1000);
+        });
     </script>
 </body>
 </html>
