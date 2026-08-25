@@ -4,10 +4,10 @@ from deep_translator import GoogleTranslator
 from transformers import pipeline
 
 print("Caricamento modello NLP in corso...")
-# Inizializza il modello NLP multilingua. Valuta il sentiment da 1 a 5 stelle.
+# Inizializza il modello NLP multilingua
 sentiment_analyzer = pipeline("sentiment-analysis", model="nlptown/bert-base-multilingual-uncased-sentiment")
 
-# Espansione fonti
+# Fonti aggiornate (rimosse le testate specifiche di buone notizie)
 FEEDS = [
     {"nome": "ANSA", "url": "https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml", "lingua": "it"},
     {"nome": "Corriere della Sera", "url": "https://xml2.corriereobjects.it/rss/homepage.xml", "lingua": "it"},
@@ -15,25 +15,32 @@ FEEDS = [
     {"nome": "Focus", "url": "https://www.focus.it/rss/tutte-le-notizie", "lingua": "it"},
     {"nome": "Il Sole 24 Ore", "url": "https://www.ilsole24ore.com/rss/italia.xml", "lingua": "it"},
     {"nome": "Sky TG24", "url": "https://tg24.sky.it/rss/all.xml", "lingua": "it"},
-    
     {"nome": "BBC News", "url": "http://feeds.bbci.co.uk/news/world/rss.xml", "lingua": "en"},
-    {"nome": "The Guardian", "url": "https://www.theguardian.com/world/rss", "lingua": "en"},
-    
-    {"nome": "Positive News", "url": "https://www.positive.news/feed/", "lingua": "en"},
-    {"nome": "Good News Network", "url": "https://www.goodnewsnetwork.org/feed/", "lingua": "en"}
+    {"nome": "The Guardian", "url": "https://www.theguardian.com/world/rss", "lingua": "en"}
 ]
 
 def analizza_notizia_nlp(testo):
     try:
-        # Tronca il testo a 512 token per limitazioni tecniche del modello base
         risultato = sentiment_analyzer(testo[:512])[0] 
         label = risultato['label']
-        # Estrae il numero di stelle (es. "5 stars" -> 5)
         stelle = int(label.split()[0])
+        # Accetta solo notizie da 4 o 5 stelle
         return stelle >= 4
     except Exception as e:
         print(f"Errore NLP: {e}")
         return False
+
+def estrai_immagine(entry):
+    # Cerca l'immagine tra i vari formati possibili nei feed RSS
+    if 'media_content' in entry:
+        for media in entry.media_content:
+            if 'url' in media and (media.get('medium') == 'image' or media.get('url', '').endswith(('.jpg', '.jpeg', '.png', '.webp'))):
+                return media['url']
+    if 'enclosures' in entry:
+        for enclosure in entry.enclosures:
+            if 'type' in enclosure and enclosure['type'].startswith('image/'):
+                return enclosure['href']
+    return None
 
 print("Inizio scansione feed...")
 notizie_filtrate = []
@@ -49,9 +56,8 @@ for feed_info in FEEDS:
             if not link or link in link_visti:
                 continue
 
-            is_positive_source = feed_info['nome'] in ["Positive News", "Good News Network"]
-
-            if is_positive_source or analizza_notizia_nlp(titolo_originale):
+            # Tutte le notizie ora devono passare il filtro AI
+            if analizza_notizia_nlp(titolo_originale):
                 
                 titolo_da_salvare = titolo_originale
                 if feed_info['lingua'] != 'it':
@@ -60,10 +66,14 @@ for feed_info in FEEDS:
                     except Exception as e:
                         print(f"Errore di traduzione: {e}")
                 
+                # Estrazione immagine
+                immagine = estrai_immagine(entry)
+                
                 notizie_filtrate.append({
                     "titolo": titolo_da_salvare,
                     "link": link,
-                    "fonte": feed_info['nome']
+                    "fonte": feed_info['nome'],
+                    "immagine": immagine
                 })
                 link_visti.add(link)
     except Exception as e:
