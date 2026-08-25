@@ -36,32 +36,41 @@
             100% { background-position: 0% 50%; }
         }
 
-        /* Unicorni che corrono sullo sfondo */
-        .background-unicorns {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            z-index: -1;
-            pointer-events: none;
+        /* Simboli di positività fluttuanti sullo sfondo */
+        .emoji-bubbles { 
+            position: fixed; 
+            top: 0; 
+            left: 0; 
+            width: 100%; 
+            height: 100%; 
+            z-index: -1; 
+            pointer-events: none; 
             overflow: hidden;
         }
-        .running-unicorn {
-            position: absolute;
-            font-size: 2.5rem;
-            animation: runAcross 18s linear infinite;
-            opacity: 0.5;
+        .emoji-bubbles li { 
+            position: absolute; 
+            list-style: none; 
+            display: block; 
+            font-size: 2.5rem; 
+            bottom: -100px; 
+            animation: floatUp 25s infinite linear; 
+            opacity: 0.6; 
         }
-        .running-unicorn:nth-child(1) { top: 15%; animation-duration: 22s; animation-delay: 0s; }
-        .running-unicorn:nth-child(2) { top: 45%; animation-duration: 15s; animation-delay: 3s; font-size: 2rem; }
-        .running-unicorn:nth-child(3) { top: 75%; animation-duration: 20s; animation-delay: 7s; font-size: 3rem; }
+        .emoji-bubbles li:nth-child(1) { left: 10%; animation-delay: 0s; font-size: 3rem; }
+        .emoji-bubbles li:nth-child(2) { left: 25%; animation-delay: 5s; animation-duration: 20s; }
+        .emoji-bubbles li:nth-child(3) { left: 45%; animation-delay: 2s; }
+        .emoji-bubbles li:nth-child(4) { left: 60%; animation-delay: 8s; animation-duration: 18s; font-size: 4rem; }
+        .emoji-bubbles li:nth-child(5) { left: 80%; animation-delay: 0s; font-size: 2rem; }
+        .emoji-bubbles li:nth-child(6) { left: 90%; animation-delay: 12s; animation-duration: 22s; }
+        .emoji-bubbles li:nth-child(7) { left: 15%; animation-delay: 3s; animation-duration: 24s; }
+        .emoji-bubbles li:nth-child(8) { left: 35%; animation-delay: 7s; animation-duration: 19s; }
+        .emoji-bubbles li:nth-child(9) { left: 75%; animation-delay: 1s; animation-duration: 21s; }
 
-        @keyframes runAcross {
-            0% { transform: translateX(-100px) scaleX(1); }
-            49% { transform: translateX(calc(100vw + 50px)) scaleX(1); }
-            50% { transform: translateX(calc(100vw + 50px)) scaleX(-1); }
-            100% { transform: translateX(-100px) scaleX(-1); }
+        @keyframes floatUp {
+            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
+            10% { opacity: 0.7; }
+            90% { opacity: 0.7; }
+            100% { transform: translateY(-1200px) rotate(360deg); opacity: 0; }
         }
 
         header { text-align: center; padding: 50px 20px 20px; max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
@@ -84,7 +93,7 @@
             background: var(--card-bg); border-radius: 24px; 
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex; flex-direction: column; border: 2px solid transparent; backdrop-filter: blur(10px);
-            position: relative; overflow: visible; /* Necessario per fare uscire il segnalibro */
+            position: relative; overflow: visible;
         }
         
         .notizia:hover { transform: translateY(-8px); border: 2px solid var(--accent); box-shadow: 0 15px 30px rgba(255, 143, 171, 0.2); z-index: 2;}
@@ -123,12 +132,10 @@
     </style>
 </head>
 <body>
-    <!-- Sfondo con unicorni che corrono -->
-    <div class="background-unicorns">
-        <div class="running-unicorn">🦄</div>
-        <div class="running-unicorn">🦄</div>
-        <div class="running-unicorn">🦄</div>
-    </div>
+    <!-- Simboli di positività fluttuanti -->
+    <ul class="emoji-bubbles">
+        <li>🌸</li><li>🍀</li><li>☀️</li><li>🦋</li><li>🌻</li><li>✨</li><li>🌸</li><li>🍀</li><li>☀️</li>
+    </ul>
 
     <header>
         <h1>Solo <span>Belle</span> Notizie</h1>
@@ -150,14 +157,13 @@
     <script>
         let tutteLeNotizie = [];
 
-        // Colori dedicati per ogni categoria di segnalibro
         function getCategoryColor(cat) {
             switch(cat) {
-                case 'Scienza & Tech': return '#3b82f6'; // Blu
-                case 'Animali': return '#10b981';      // Verde
-                case 'Salute': return '#06b6d4';       // Turchese
-                case 'Società': return '#f59e0b';      // Ambra/Arancione
-                default: return '#8b5cf6';             // Viola (Mondo)
+                case 'Scienza & Tech': return '#3b82f6';
+                case 'Animali': return '#10b981';
+                case 'Salute': return '#06b6d4';
+                case 'Società': return '#f59e0b';
+                default: return '#8b5cf6';
             }
         }
 
@@ -224,7 +230,6 @@
                 
                 const dataRender = notizia.data ? `<span class="data-notizia">${notizia.data}</span>` : ``;
                 
-                // Generazione del segnalibro colorato in base alla categoria
                 let catSegnalibro = '';
                 if (notizia.categoria) {
                     const bgColor = getCategoryColor(notizia.categoria);
