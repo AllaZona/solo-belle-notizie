@@ -19,6 +19,8 @@ jobs:
         run: pip install feedparser
       - name: Installa librerie
         run: pip install feedparser deep-translator
+      - name: Installa librerie
+        run: pip install feedparser deep-translator transformers torch
       - name: Cerca le notizie
         run: python scraper.py
       - name: Salva sul sito
