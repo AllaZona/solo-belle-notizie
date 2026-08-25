@@ -11,8 +11,8 @@ FEEDS = [
     
     {"nome": "BBC News", "url": "http://feeds.bbci.co.uk/news/world/rss.xml", "lingua": "en"},
     {"nome": "The Guardian", "url": "https://www.theguardian.com/world/rss", "lingua": "en"},
-    {"nome": "Positive News", "url": "https://www.positive.news/feed/", "lingua": "en"},
-    {"nome": "Good News Network", "url": "https://www.goodnewsnetwork.org/feed/", "lingua": "en"}
+   # {"nome": "Positive News", "url": "https://www.positive.news/feed/", "lingua": "en"},
+   # {"nome": "Good News Network", "url": "https://www.goodnewsnetwork.org/feed/", "lingua": "en"}
 ]
 
 # Dizionari per il filtraggio
