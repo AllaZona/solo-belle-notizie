@@ -28,7 +28,6 @@
             background-size: 400% 400%;
             animation: gradientBG 20s ease infinite;
             overflow-x: hidden;
-            cursor: pointer; /* Invita l'utente a cliccare in giro */
         }
 
         @keyframes gradientBG {
@@ -37,20 +36,32 @@
             100% { background-position: 0% 50%; }
         }
 
-        .emoji-bubbles { position: fixed; top: 0; left: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
-        .emoji-bubbles li { position: absolute; list-style: none; display: block; font-size: 2.5rem; bottom: -100px; animation: floatUp 25s infinite linear; opacity: 0.6; }
-        .emoji-bubbles li:nth-child(1) { left: 10%; animation-delay: 0s; font-size: 3rem; }
-        .emoji-bubbles li:nth-child(2) { left: 25%; animation-delay: 5s; animation-duration: 20s; }
-        .emoji-bubbles li:nth-child(3) { left: 45%; animation-delay: 2s; }
-        .emoji-bubbles li:nth-child(4) { left: 60%; animation-delay: 8s; animation-duration: 18s; font-size: 4rem; }
-        .emoji-bubbles li:nth-child(5) { left: 80%; animation-delay: 0s; font-size: 2rem; }
-        .emoji-bubbles li:nth-child(6) { left: 90%; animation-delay: 12s; animation-duration: 22s; }
+        /* Unicorni che corrono sullo sfondo */
+        .background-unicorns {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            pointer-events: none;
+            overflow: hidden;
+        }
+        .running-unicorn {
+            position: absolute;
+            font-size: 2.5rem;
+            animation: runAcross 18s linear infinite;
+            opacity: 0.5;
+        }
+        .running-unicorn:nth-child(1) { top: 15%; animation-duration: 22s; animation-delay: 0s; }
+        .running-unicorn:nth-child(2) { top: 45%; animation-duration: 15s; animation-delay: 3s; font-size: 2rem; }
+        .running-unicorn:nth-child(3) { top: 75%; animation-duration: 20s; animation-delay: 7s; font-size: 3rem; }
 
-        @keyframes floatUp {
-            0% { transform: translateY(0) rotate(0deg); opacity: 0; }
-            10% { opacity: 0.7; }
-            90% { opacity: 0.7; }
-            100% { transform: translateY(-1200px) rotate(360deg); opacity: 0; }
+        @keyframes runAcross {
+            0% { transform: translateX(-100px) scaleX(1); }
+            49% { transform: translateX(calc(100vw + 50px)) scaleX(1); }
+            50% { transform: translateX(calc(100vw + 50px)) scaleX(-1); }
+            100% { transform: translateX(-100px) scaleX(-1); }
         }
 
         header { text-align: center; padding: 50px 20px 20px; max-width: 800px; margin: 0 auto; position: relative; z-index: 1; }
@@ -73,27 +84,26 @@
             background: var(--card-bg); border-radius: 24px; 
             box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05); transition: transform 0.3s ease, box-shadow 0.3s ease;
             display: flex; flex-direction: column; border: 2px solid transparent; backdrop-filter: blur(10px);
-            position: relative; /* Necessario per l'unicorno curioso */
+            position: relative; overflow: visible; /* Necessario per fare uscire il segnalibro */
         }
         
         .notizia:hover { transform: translateY(-8px); border: 2px solid var(--accent); box-shadow: 0 15px 30px rgba(255, 143, 171, 0.2); z-index: 2;}
 
-        /* L'Unicorno Curioso che fa capolino */
-        .notizia::before {
-            content: '🦄';
+        /* Segnalibro che scende dall'alto */
+        .categoria-segnalibro {
             position: absolute;
-            top: -10px;
+            top: -2px;
             right: 25px;
-            font-size: 3.5rem;
-            opacity: 0;
-            transform: translateY(30px) rotate(25deg);
-            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
-            z-index: -1; /* Nasconde l'unicorno dietro la scheda */
-            pointer-events: none;
-        }
-        .notizia:hover::before {
-            opacity: 1;
-            transform: translateY(-45px) rotate(-10deg);
+            color: white;
+            font-size: 0.75rem;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 0.05em;
+            padding: 8px 12px 10px 12px;
+            border-bottom-left-radius: 10px;
+            border-bottom-right-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.15);
+            z-index: 5;
         }
 
         .immagine-notizia { width: 100%; height: 190px; object-fit: cover; border-top-left-radius: 22px; border-top-right-radius: 22px;}
@@ -101,10 +111,7 @@
         
         .meta-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
 
-        .badges { display: flex; gap: 8px; align-items: center; }
         .fonte { background-color: #fef08a; color: #854d0e; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 5px 12px; border-radius: 20px; font-weight: 800; }
-        .categoria-badge { background-color: #dbeafe; color: #1e40af; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 5px 12px; border-radius: 20px; font-weight: 800; }
-
         .data-notizia { font-size: 0.85rem; color: #9ca3af; font-weight: 600; }
 
         .titolo-link { color: var(--text-main); text-decoration: none; font-size: 1.2rem; font-weight: 800; display: block; margin-bottom: 24px; }
@@ -113,32 +120,15 @@
         .leggi-tutto { font-size: 0.9rem; color: var(--accent); font-weight: 800; text-decoration: none; display: flex; align-items: center; gap: 4px; }
         .leggi-tutto:hover { color: var(--accent-hover); }
         .loader { text-align: center; color: var(--text-main); font-weight: bold; grid-column: 1 / -1; padding: 40px; font-size: 1.2rem;}
-
-        /* Animazioni dell'Unicorno al Click */
-        .magia-unicorno {
-            position: fixed; font-size: 2.5rem; pointer-events: none; z-index: 9999;
-            animation: gallop 1s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
-        }
-        .magia-scintilla {
-            position: fixed; font-size: 1.5rem; pointer-events: none; z-index: 9998;
-            animation: sparkle 0.8s ease-out forwards;
-        }
-
-        @keyframes gallop {
-            0% { opacity: 1; transform: translate(-50%, -50%) scale(0.5); }
-            50% { transform: translate(30px, -80px) scale(1.2) rotate(-15deg); }
-            100% { opacity: 0; transform: translate(120px, -180px) scale(1) rotate(-35deg); }
-        }
-        @keyframes sparkle {
-            0% { opacity: 1; transform: translate(-50%, -50%) scale(0.5) rotate(0deg); }
-            100% { opacity: 0; transform: translate(-40px, 40px) scale(1.5) rotate(180deg); }
-        }
     </style>
 </head>
 <body>
-    <ul class="emoji-bubbles">
-        <li>🌸</li><li>🍀</li><li>☀️</li><li>🦋</li><li>🌻</li><li>✨</li>
-    </ul>
+    <!-- Sfondo con unicorni che corrono -->
+    <div class="background-unicorns">
+        <div class="running-unicorn">🦄</div>
+        <div class="running-unicorn">🦄</div>
+        <div class="running-unicorn">🦄</div>
+    </div>
 
     <header>
         <h1>Solo <span>Belle</span> Notizie</h1>
@@ -159,6 +149,17 @@
 
     <script>
         let tutteLeNotizie = [];
+
+        // Colori dedicati per ogni categoria di segnalibro
+        function getCategoryColor(cat) {
+            switch(cat) {
+                case 'Scienza & Tech': return '#3b82f6'; // Blu
+                case 'Animali': return '#10b981';      // Verde
+                case 'Salute': return '#06b6d4';       // Turchese
+                case 'Società': return '#f59e0b';      // Ambra/Arancione
+                default: return '#8b5cf6';             // Viola (Mondo)
+            }
+        }
 
         fetch('notizie.json')
             .then(response => response.json())
@@ -222,18 +223,22 @@
                     : ``;
                 
                 const dataRender = notizia.data ? `<span class="data-notizia">${notizia.data}</span>` : ``;
-                const catBadge = notizia.categoria ? `<span class="categoria-badge">${notizia.categoria}</span>` : ``;
+                
+                // Generazione del segnalibro colorato in base alla categoria
+                let catSegnalibro = '';
+                if (notizia.categoria) {
+                    const bgColor = getCategoryColor(notizia.categoria);
+                    catSegnalibro = `<div class="categoria-segnalibro" style="background-color: ${bgColor};">${notizia.categoria}</div>`;
+                }
 
                 contenitore.innerHTML += `
                     <div class="notizia">
+                        ${catSegnalibro}
                         ${tagImmagine}
                         <div class="notizia-content">
                             <div>
                                 <div class="meta-info">
-                                    <div class="badges">
-                                        <span class="fonte">${notizia.fonte}</span>
-                                        ${catBadge}
-                                    </div>
+                                    <span class="fonte">${notizia.fonte}</span>
                                     ${dataRender}
                                 </div>
                                 <a class="titolo-link" href="${notizia.link}" target="_blank" rel="noopener noreferrer">${notizia.titolo}</a>
@@ -244,31 +249,6 @@
                 `;
             });
         }
-
-        // --- MAGIA INTERATTIVA AL CLICK ---
-        document.addEventListener('click', function(e) {
-            // Crea l'unicorno
-            const unicorno = document.createElement('div');
-            unicorno.className = 'magia-unicorno';
-            unicorno.innerText = '🦄';
-            unicorno.style.left = e.clientX + 'px';
-            unicorno.style.top = e.clientY + 'px';
-            document.body.appendChild(unicorno);
-
-            // Crea la scintilla
-            const scintilla = document.createElement('div');
-            scintilla.className = 'magia-scintilla';
-            scintilla.innerText = '✨';
-            scintilla.style.left = e.clientX + 'px';
-            scintilla.style.top = e.clientY + 'px';
-            document.body.appendChild(scintilla);
-
-            // Rimuove gli elementi dal DOM dopo l'animazione per non rallentare il sito
-            setTimeout(() => {
-                unicorno.remove();
-                scintilla.remove();
-            }, 1000);
-        });
     </script>
 </body>
 </html>
