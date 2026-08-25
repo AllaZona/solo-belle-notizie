@@ -3,9 +3,8 @@ import json
 import random
 from datetime import datetime, timedelta, timezone
 from time import mktime, sleep
-from deep_translator import GoogleTranslator
+from deep_translator import GoogleTranslator, MyMemoryTranslator
 
-# Elenco fonti RSS
 FEEDS = [
     {"nome": "ANSA", "url": "https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml", "lingua": "it"},
     {"nome": "Corriere della Sera", "url": "https://xml2.corriereobjects.it/rss/homepage.xml", "lingua": "it"},
@@ -41,7 +40,6 @@ CITAZIONI = [
     "La vita è il 10% ciò che ti accade e il 90% come reagisci. (Charles R. Swindoll)"
 ]
 
-# Immagini statiche ad alta risoluzione per gestire i blocchi senza foto
 IMMAGINI_FALLBACK = [
     "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
     "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
@@ -49,7 +47,6 @@ IMMAGINI_FALLBACK = [
     "https://images.unsplash.com/photo-1464822759023-fed622ff2c3b?w=800&q=80"
 ]
 
-# Dizionari semantici
 PAROLE_POSITIVE_IT = ['scoperta', 'successo', 'crescita', 'guarigione', 'salvataggio', 'vittoria', 'innovazione', 'aiuto', 'progresso', 'pace', 'accordo', 'svolta', 'traguardo', 'solidarietà', 'miracolo', 'donazione', 'rinascita']
 PAROLE_NEGATIVE_IT = ['morti', 'crisi', 'tragedia', 'incidente', 'guerra', 'omicidio', 'arresto', 'crollo', 'paura', 'violenza', 'attacco', 'ucciso', 'vittime', 'condannati', 'truffa', 'sanziona', 'armi', 'missili', 'abuso', 'feriti', 'decesso', 'strage']
 
@@ -94,7 +91,8 @@ def estrai_immagine(entry):
 print("Inizio scansione feed...")
 notizie_filtrate = []
 link_visti = set()
-limite_temporale = datetime.now(timezone.utc) - timedelta(days=30)
+# Filtro temporale modificato a 7 giorni
+limite_temporale = datetime.now(timezone.utc) - timedelta(days=7)
 
 for feed_info in FEEDS:
     try:
@@ -115,18 +113,29 @@ for feed_info in FEEDS:
                 except Exception:
                     pass
 
-            # Filtro applicato PRIMA della traduzione
             if analizza_notizia(titolo_originale, feed_info['lingua']):
                 titolo_da_salvare = titolo_originale
                 
                 if feed_info['lingua'] != 'it':
+                    traduzione_effettuata = False
+                    
                     try:
                         traduzione = GoogleTranslator(source='auto', target='it').translate(titolo_originale)
                         if traduzione and "Error 500" not in traduzione and "<html" not in traduzione.lower():
                             titolo_da_salvare = traduzione
-                        sleep(1) # Pausa obbligatoria per evitare blocchi da Google
-                    except Exception as e:
-                        print(f"Errore di traduzione: {e}")
+                            traduzione_effettuata = True
+                    except Exception:
+                        pass
+                    
+                    if not traduzione_effettuata:
+                        try:
+                            traduzione = MyMemoryTranslator(source=feed_info['lingua'], target='it').translate(titolo_originale)
+                            if traduzione:
+                                titolo_da_salvare = traduzione
+                        except Exception:
+                            pass
+                    
+                    sleep(1)
                 
                 immagine = estrai_immagine(entry)
                 if not immagine:
