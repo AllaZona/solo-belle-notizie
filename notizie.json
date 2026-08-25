@@ -1,12 +1,404 @@
 [
   {
-    "titolo": "Eurovision: troppa euforia per la vittoria, Nemo rompe il trofeo di cristallo e si fa male al dito",
-    "link": "https://video.corriere.it/spettacoli/eurovision-troppa-euforia-per-la-vittoria-nemo-rompe-il-trofeo-di-cristallo-e-si-fa-male-al-dito/f34877b7-811f-4e7e-b64b-becf5d231xlk",
-    "fonte": "Corriere della Sera"
+    "titolo": "Ricorrenza per la nascita di Maometto, re del Marocco grazia 634 condannati",
+    "link": "https://www.ansa.it/sito/notizie/topnews/2026/08/25/ricorrenza-per-la-nascita-di-maometto-re-del-marocco-grazia-634-condannati_a5be0f06-8199-4fa6-b6bd-b44f0237c11e.html",
+    "fonte": "ANSA",
+    "immagine": null
+  },
+  {
+    "titolo": "Trump sfida il Canada, 'il Lago Ontario si chiamerà Lago America'",
+    "link": "https://www.ansa.it/sito/notizie/topnews/2026/08/25/trump-sfida-il-canada-il-lago-ontario-si-chiamera-lago-america_e67a708d-6702-4a2e-9706-da2d47739306.html",
+    "fonte": "ANSA",
+    "immagine": null
+  },
+  {
+    "titolo": "LE FOTO SULLO YACHT Le immagini degli incontri e i telefonini lasciati all’esterno per blindare i colloqui riservati",
+    "link": "https://www.corriere.it/cronache/24_maggio_12/toti-arrestato-gli-incontri-sullo-yacht-di-spinelli-e-i-telefonini-lasciati-all-esterno-per-blindare-i-colloqui-riservati-e99c3dad-0cea-46a5-9b3a-8e728c4c3xlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Accumulare allegramente debito  senza pensare a chi pagherà",
+    "link": "https://www.corriere.it/lettere-al-direttore/12-05-2024/index.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Casa più grande, studi dei figli, pensione: come investire e far lievitare i risparmi, 3 piani da imitare",
+    "link": "https://www.corriere.it/economia/risparmio/cards/casa-piu-grande-studi-dei-figli-pensione-come-investire-i-risparmi-e-far-crescere-il-tesoretto-3-piani-da-imitare/pianificazione-finanziaria-prepararsi-a-un-lungo-viaggio_principale.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "201. La via del tramonto",
+    "link": "https://www.corriere.it/alessandro-d-avenia-ultimo-banco/24_maggio_13/via-tramonto-c2e6bfcd-1b0e-4e91-95b5-0e470f5cexlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Modena, violentata dagli amici a 12 anni: il video sul telefono della coetanea",
+    "link": "https://corrieredibologna.corriere.it/notizie/cronaca/24_maggio_12/modena-violentata-dagli-amici-a-12-anni-il-video-sul-telefono-della-coetanea-01a86e9e-d5c5-4823-9d93-17dc41ec8xlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Monopoli, nozze vip in cattedrale. Lo sposo è Gavin Coulson, magnate americano del food al top tra gli under 30 di Forbes",
+    "link": "https://bari.corriere.it/notizie/cultura-e-tempo-libero/24_maggio_11/monopoli-nozze-vip-in-cattedrale-lo-sposo-e-gavin-coulson-magnate-americano-del-food-al-top-tra-gli-under-30-di-forbes-fa8687f2-c272-4d04-84e7-404620711xlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Verratti e la moglie top model: gli affari in Lussemburgo (con l’ex manager Gucci)",
+    "link": "https://www.corriere.it/economia/finanza/24_maggio_12/verratti-e-la-moglie-top-model-jessica-aidi-gli-affari-in-lussemburgo-con-l-ex-manager-gucci-08604c6f-020f-4fcc-bbe4-acc5d1f3dxlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Btp, cedole e prezzi: ecco come calcolare il rendimento finale di un titolo",
+    "link": "https://www.corriere.it/economia/risparmio/cards/btp-cedole-e-prezzi-ecco-come-calcolare-il-rendimento-finale-di-un-titolo/prezzi-e-nbsp-rendimenti_principale.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Tesla, il giallo del Supercharger: Musk licenzia l’intero team, poi annuncia investimento da mezzo miliardo",
+    "link": "https://www.corriere.it/economia/innovazione/24_maggio_12/tesla-il-giallo-del-supercharger-musk-licenzia-l-intero-team-poi-annuncia-un-investimento-da-mezzo-miliardo-ab2afe45-ff87-4c7b-a18d-24f8004c7xlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Un «portale visivo» mette in contatto Dublino e New York",
+    "link": "https://video.corriere.it/video-virali/portale-visivo-mette-contatto-dublino-new-york/28d2f990-0ee4-11ef-aec7-630484bff6fc",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Fiorello a Civil Week racconta un aneddoto su suo padre finanziere: «Quella volta che mi mostrò cosa fosse l'onore...»",
+    "link": "https://video.corriere.it/buone-notizie/civil-week/fiorello-a-civil-week-racconta-un-aneddoto-su-suo-padre-finanziere-quella-volta-che-mi-mostro-cosa-fosse-l-onore/8ce2f455-8445-4535-adee-e7f583431xlk",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Angelina Mango, la performance da dieci nella finale dell'Eurovision",
+    "link": "https://video.corriere.it/spettacoli/angelina-mango-la-performance-da-dieci-nella-finale-dell-eurovision/0352eda2-7cb8-4057-9c12-929868a04xlk",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "La notte di Massenzio: danza, teatro e reading fuori dal centro di Roma",
+    "link": "https://video.corriere.it/roma/la-notte-di-massenzio-danza-teatro-e-reading-fuori-dal-centro-di-roma/44a002a9-ba55-4a47-88fb-e116d6430xlk",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "La posta di Gramellini Rassegnati: non puoi cambiare la testa dei tuoi suoceri. Cambia le tue aspettative",
+    "link": "https://www.corriere.it/sette/editoriali/24_maggio_12/la-posta-di-gramellini-ho-32-anni-sposata-da-2-la-sua-famiglia-e-paesana-gretta-come-gestire-la-situazione-a6debba3-fdf0-44e0-a59b-6539d435axlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Elena Cecchettin: «Se subite violenza fate in modo che si sappia. Forza è resistenza»",
+    "link": "https://27esimaora.corriere.it/24_maggio_12/elena-cecchettin-se-subite-violenza-fate-modo-che-si-sappia-forza-resistenza-d64ae554-108f-11ef-9e2a-885dd95aae1b.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "La classifica di Eurovision 2024, live durante la finale",
+    "link": "https://www.corriere.it/spettacoli/eurovision/24_maggio_12/la-classifica-di-eurovision-2024-live-durante-la-finale-66a7a218-8ff9-4806-8131-c38ef0c9fxlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "«Sono io quindi ho ragione». Il degrado dei rapporti umani",
+    "link": "https://www.corriere.it/lodicoalcorriere/index/11-05-2024/index.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Le pagelle di Le Mans: Martin dominatore. È tornato il mago Marquez, Bagnaia in difesa",
+    "link": "https://www.corriere.it/sport/motomondiale/24_maggio_12/pagelle-motogp-francia-martin-dominatore-marquez-mago-e-bagnaia-in-difesa-disastro-quartararo-707e94b4-b31c-47ce-97d7-42e9e130axlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Lazza diventa papà: l'annuncio via social del rapper con la fidanzata Greta Orsingher",
+    "link": "https://www.corriere.it/spettacoli/24_maggio_12/lazza-diventa-papa-l-annuncio-via-social-del-rapper-con-la-fidanzata-greta-orsingher-f0399baa-b984-4aee-ab3f-5f425e2f7xlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Festa in Nigeria per l'arrivo di Meghan «l'africana». L'omaggio a Harry: «Lei ha sposato una nostra sorella»",
+    "link": "https://www.corriere.it/esteri/24_maggio_12/festa-in-nigeria-per-l-arrivo-di-meghan-l-africana-l-omaggio-a-harry-lei-ha-sposato-una-nostra-sorella-grazie-per-avercela-portata-4bd48a74-0b6f-497f-876a-7676dba26xlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "I 14 migliori Beach Club d’Italia da nord a sud, isole comprese",
+    "link": "https://www.corriere.it/cook/news/cards/i-14-migliori-beach-club-d-italia-nord-sud-isole-comprese/guida-migliori-beach-club-d-italia_principale.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "«Le 99 vie massoniche di Napoli» presentato a Palazzo Nunziante",
+    "link": "https://napoli.corriere.it/notizie/cultura-e-tempo-libero/24_maggio_08/le-99-vie-massoniche-di-napoli-presentato-a-palazzo-nunziante-ed824d6e-aca8-47dd-b955-aefbd84aaxlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Primo sole. Mini guida su cosa indossare per le prime giornate in spiaggia |Foto",
+    "link": "https://www.iodonna.it/moda/tendenze/2024/05/04/moda-mare-2024-cosa-indossare-prime-giornate-spiaggia/?intcmp=iod_hpcor_articolo",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Le previsioni per la giornata per lei e per lui e la pagella dell’umore per i 12 segni",
+    "link": "https://www.iodonna.it/oroscopo/oggi/?intcmp=iod_hpcor_articolo",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Menopausa in salute. Perché controllare la Vitamina D e quali esami fare?",
+    "link": "https://www.iodonna.it/benessere/salute-e-psicologia/2024/05/06/menopausa-in-salute-perche-controllare-la-vitamina-d-e-quali-esami-fare/?intcmp=iod_hpcor_articolo",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "I migliori Pinot Nero italiani: ecco la classifica dei primi cinque",
+    "link": "https://www.corriere.it/cook/news/cards/i-migliori-pinot-nero-italiani-ecco-classifica-primi-cinque/i-5-migliori-pinot-nero_principale.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Come apparecchiare la tavola secondo il galateo (e le parole da non dire mai)",
+    "link": "https://www.corriere.it/cook/news/24_maggio_12/come-apparecchiare-tavola-secondo-galateo-parole-non-dire-mai-3ba864e2-0ea8-11ef-aec7-630484bff6fc.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Cioccolato, come scegliere il migliore in pochi passaggi",
+    "link": "https://www.corriere.it/cook/news/cards/cioccolato-come-scegliere-migliore-pochi-passaggi/importanza-sapere-leggere-un-etichetta_principale.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Case green, detrazioni e bonus selettivi: come cambieranno le agevolazioni, le ipotesi",
+    "link": "https://www.corriere.it/economia/casa/24_aprile_14/case-green-detrazioni-e-bonus-selettivi-come-cambieranno-le-agevolazioni-le-ipotesi-e82d440e-cd19-4c3c-a769-bb0db8311xlk.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Ferrari 12Cilindri, il nuovo bolide celebra il motore simbolo delle Rosse. Foto e prezzi",
+    "link": "https://www.corriere.it/motori/news/anteprime/24_maggio_03/ferrari-12cilindri-nuovo-bolide-celebra-motore-simbolo-rosse-foto-prezzi-4bb81080-0705-11ef-aa44-0f4afc4013d4.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Boom di targhe polacche su motorini e auto: servono ad aggirare le assicurazioni. Il caso",
+    "link": "https://www.corriere.it/motori/news/24_aprile_30/boom-targhe-polacche-motorini-auto-servono-ad-aggirare-assicurazioni-caso-d2847b4c-063f-11ef-91be-f25bc9d4d523.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "La Xiaomi SU7 continua a macinare record: prodotti 10 mila pezzi in un mese. I prezzi",
+    "link": "https://www.corriere.it/motori/news/24_maggio_02/xiaomi-su7-continua-macinare-record-prodotti-10-mila-pezzi-un-mese-prezzi-a786024c-06f5-11ef-aa44-0f4afc4013d4.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Obey e l’impegno della street art nell’App de «la Lettura» (e in edicola)",
+    "link": "https://www.corriere.it/la-lettura/24_maggio_10/lettura-appuntamento-doppio-nuovo-numero-la-letturina-edicola-domenica-2523676e-0eec-11ef-aec7-630484bff6fc.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "I misteri d’Italia, la «Letturina», il giardino di Olivia Laing: ecco la newsletter",
+    "link": "https://www.corriere.it/la-lettura/24_maggio_09/i-misteri-d-italia-letturina-giardino-olivia-laing-ecco-newsletter-75bf5a44-0e28-11ef-911b-b1401d26d60c.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Morto Frank Stella, maestro del minimalismo. Segnò l’arte del 900",
+    "link": "https://www.corriere.it/cultura/24_maggio_05/morto-frank-stella-maestro-minimalismo-segno-l-arte-900-d5ecc8e2-0aa5-11ef-a292-58df6595675e.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
+  },
+  {
+    "titolo": "Il viaggio rivoluzionario di Baricco: «Castelli di rabbia» in edicola con il «Corriere della Sera»",
+    "link": "https://www.corriere.it/gli-allegati-di-corriere/24_marzo_21/viaggio-rivoluzionario-baricco-castelli-rabbia-edicola-il-corriere-sera-bf47c966-e79b-11ee-a95a-09971739e78f.shtml",
+    "fonte": "Corriere della Sera",
+    "immagine": null
   },
   {
     "titolo": "Costa in tour nelle capitali Ue: “Difesa comune entro il 2030 per avere la pace in Europa”",
     "link": "https://www.repubblica.it/esteri/2026/08/25/news/antonio_costa_tour_capitali_ue_difesa_comune_entro_2030_per_paceeuropa-425546338/",
-    "fonte": "Repubblica"
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "Accise, nuova mini-proroga degli sconti sul diesel. Poi aiuti per i redditi bassi",
+    "link": "https://www.repubblica.it/economia/2026/08/25/news/accise_scadenza_sconti_vertice_meloni_maggioranza-425546223/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "La riscossa dei caccia russi: così Mosca torna a dominare la guerra dei cieli in Ucraina",
+    "link": "https://www.repubblica.it/esteri/2026/08/25/news/riscossa_caccia_russi_cosi_mosca_torna_dominare_guerra_dei_cieli_ucraina-425546167/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "Focolaio di tubercolosi tra specializzandi e personale all’Istituto di medicina legale di Milano",
+    "link": "https://milano.repubblica.it/cronaca/2026/08/25/news/tubercolosi_milano_8_casi_istituto_medicina_legale-425546127/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "Federica Brignone si opera nel pomeriggio: “Ho ancora dolore alla gamba”",
+    "link": "https://www.repubblica.it/sport/sci/2026/08/25/news/federica_brignone_operazione_gamba-425546043/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "A Venezia c’è un’isola in vendita. Ecco Crevan: vista su Burano e Torcello e forte napoleonico",
+    "link": "https://www.repubblica.it/viaggi/2026/08/25/news/a_venezia_c_e_un_isola_in_vendita_ecco_crevan_vista_su_burano_e_torcello_e_fortino_napoleonico-425545986/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "Netanyahu, il cacciatore di aquiloni: a Gaza anche i giochi dei bambini diventano un bersaglio",
+    "link": "https://www.repubblica.it/esteri/2026/08/25/news/netanyahu_cacciatore_di_aquiloni_a_gaza_anche_giochi_bambini_diventano_bersaglio_israele-425545835/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "Calciomercato in diretta: Como vicinissimo a Kean, Juve su Sorloth e Mateta. Aston Villa su Leao",
+    "link": "https://www.repubblica.it/sport/calcio/mercato/2026/08/25/diretta/calciomercato_diretta_tutti_gli_affari_del_giorno_kean_sorloth_gittens-425545668/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "Tanti genitori in fila per vaccinare i figli: “Ora abbiamo paura”",
+    "link": "https://palermo.repubblica.it/cronaca/2026/08/25/news/difterite_no-vax_paura_genitori_vaccinazioni_palermo_notizie-425545583/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "Monica Bellucci: “Oggi non farei Irréversible. Tim Burton? Dalle relazioni imparo sempre qualcosa”",
+    "link": "https://www.repubblica.it/spettacoli/cinema/2026/08/25/news/monica_bellucci_film_kettice_premio_locarno_intervista-425544681/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "Combatte per gli Usa sulla portaerei Lincoln. L’Ice arresta suo padre",
+    "link": "https://www.repubblica.it/esteri/2026/08/25/news/joshua_aviles_soldato_portaerei_lincoln_usa_ice_arresta_suo_padre-425545063/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "La faida tra caporali che insanguina Borgo Mezzanone, la città invisibile degli schiavi",
+    "link": "https://bari.repubblica.it/cronaca/2026/08/25/news/viaggio_borgo_mezzanone_baraccopoli_foggia_omicidio_braccianti_faida_caporali-425545313/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "La scommessa ucraina dell’Europa",
+    "link": "https://www.repubblica.it/commenti/2026/08/25/news/la_scommessa_ucraina_dell_europa-425545385/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "Il matematico russo in cella che sfida il Cremlino. E dal carcere risolve “la congettura di Chui”",
+    "link": "https://www.repubblica.it/esteri/2026/08/24/news/azat_miftakhov_matematico_russo_sfida_cremlino_risolve_congettura_chui-425544979/",
+    "fonte": "Repubblica",
+    "immagine": null
+  },
+  {
+    "titolo": "Un milanese su tre è «nuovo»: ricambio per 400mila dal 2014",
+    "link": "https://www.ilsole24ore.com/art/un-milanese-tre-e-nuovo-ricambio-400mila-2014-AJEOuZr",
+    "fonte": "Il Sole 24 Ore",
+    "immagine": "https://i2.res.24o.it/images2010/S24/Documenti/2026/08/22/Immagini/Ritagli/2026-02-15T110542Z_2056781981_MT1ZUMA000DHNEA3_RTRMADP_3_ZUMA-U07313682531CHl-1440x752@IlSole24Ore-Web.JPG"
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.bbc.co.uk/news/articles/c783lnz12vlo?at_medium=RSS&at_campaign=rss",
+    "fonte": "BBC News",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.bbc.co.uk/news/articles/c62m4zn1q6mo?at_medium=RSS&at_campaign=rss",
+    "fonte": "BBC News",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.bbc.co.uk/news/articles/c05rj80ve56o?at_medium=RSS&at_campaign=rss",
+    "fonte": "BBC News",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.bbc.co.uk/news/articles/ckgvk9p2n7ko?at_medium=RSS&at_campaign=rss",
+    "fonte": "BBC News",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.bbc.co.uk/news/videos/ckg8wkd0j7do?at_medium=RSS&at_campaign=rss",
+    "fonte": "BBC News",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.bbc.co.uk/news/videos/cgljl9zp47xo?at_medium=RSS&at_campaign=rss",
+    "fonte": "BBC News",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.theguardian.com/us-news/2026/aug/24/canada-tariff-increase-trump-auto",
+    "fonte": "The Guardian",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.theguardian.com/world/2026/aug/25/artist-gao-zhen-sculptures-mao-zedong-jailed-china",
+    "fonte": "The Guardian",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.theguardian.com/world/2026/aug/25/indonesia-wildfires-kalimantan-smoke-super-el-nino",
+    "fonte": "The Guardian",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.theguardian.com/world/2026/aug/25/japan-1800-people-move-pull-400-tonne-hirosaki-castle-with-ropes",
+    "fonte": "The Guardian",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.theguardian.com/theguardian/live/2026/aug/25/reader-q-and-a-ask-guardian-foreign-correspondant-author-luke-harding-a-question",
+    "fonte": "The Guardian",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.theguardian.com/world/live/2026/aug/25/europe-ukraine-patriot-missiles-zelenskyy-trump-russia-drone-germany-latest-news-update",
+    "fonte": "The Guardian",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.theguardian.com/world/2026/aug/22/uk-france-diplomats-israel-palestine",
+    "fonte": "The Guardian",
+    "immagine": null
+  },
+  {
+    "titolo": "Error 500 (Server Error)!!1500.That’s an error.There was an error. Please try again later.That’s all we know.",
+    "link": "https://www.theguardian.com/world/2026/aug/24/the-whitewashing-of-the-green-indian-mission",
+    "fonte": "The Guardian",
+    "immagine": null
   }
 ]
