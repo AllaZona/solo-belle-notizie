@@ -1,30 +1,22 @@
 {
-  "citazione": "Fai un respiro profondo. Tutto andrà bene. 🌿",
-  "curiosita": "Il battito cardiaco di due persone che si amano si sincronizza se si guardano negli occhi.",
+  "citazione": "Sii gentile con te stesso oggi. Te lo meriti. ✨",
+  "curiosita": "Le lontre di mare si tengono per mano mentre dormono per non separarsi.",
   "notizie": [
     {
       "titolo": "Costa in tour nelle capitali Ue: “Difesa comune entro il 2030 per avere la pace in Europa”",
       "link": "https://www.repubblica.it/esteri/2026/08/25/news/antonio_costa_tour_capitali_ue_difesa_comune_entro_2030_per_paceeuropa-425546338/",
       "fonte": "Repubblica",
-      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80"
+      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      "data": "25/08/2026",
+      "categoria": "Società"
     },
     {
       "titolo": "«Riporto ad Amatrice la mia attività, la rinascita dipende da noi». La storia di Serena Poggi, onicotecnica che ha aperto il suo studio nel Centro Commerciale ?Il Corso?",
       "link": "https://www.ilmessaggero.it/rieti/rieti_serena_poggi_torna_amatrice_onicotecnica-9721957.html",
       "fonte": "Il Messaggero",
-      "immagine": "https://statics.cedscdn.it/photos/MED/2026/08/23/9721957_23232613_rieti.jpg"
-    },
-    {
-      "titolo": "Prince Harry quits board of wildlife charity after rangers’ human rights abuses",
-      "link": "https://www.theguardian.com/uk-news/2026/aug/24/prince-harry-quits-board-wildlife-charity-african-parks-human-rights-abuses",
-      "fonte": "The Guardian",
-      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
-    },
-    {
-      "titolo": "Zelenski se rodea de sus aliados europeos y asegura que Ucrania quiere la paz pero no a cualquier precio",
-      "link": "https://elpais.com/internacional/2026-08-24/costa-y-burnham-llegan-a-kiev-para-conmemorar-con-zelenski-el-dia-de-la-independencia-de-ucrania.html",
-      "fonte": "El Pais",
-      "immagine": "https://imagenes.elpais.com/resizer/v2/T7FO5E73IJNKLKG5R77HCOGXZY.jpg?auth=36a458ef9848d0249977d880dbd704365f7f29e6083f80b942ce4ad0e60005f4"
+      "immagine": "https://statics.cedscdn.it/photos/MED/2026/08/23/9721957_23232613_rieti.jpg",
+      "data": "Data sconosciuta",
+      "categoria": "Scienza & Tech"
     }
   ]
 }
