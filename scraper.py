@@ -54,7 +54,6 @@ IMMAGINI_FALLBACK = [
     "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
 ]
 
-# Dizionari con espansione geopolitica e criminale
 PAROLE_POSITIVE_IT = ['scoperta', 'successo', 'crescita', 'guarigione', 'salvataggio', 'vittoria', 'innovazione', 'aiuto', 'progresso', 'pace', 'accordo', 'svolta', 'traguardo', 'solidarietà', 'miracolo', 'donazione', 'rinascita', 'cucciolo', 'amore', 'felicità']
 PAROLE_NEGATIVE_IT = ['morti', 'crisi', 'tragedia', 'incidente', 'guerra', 'omicidio', 'arrest', 'croll', 'paura', 'violenz', 'attacc', 'uccis', 'vittim', 'condann', 'truff', 'sanzion', 'armi', 'missil', 'abus', 'ferit', 'decess', 'strag', 'carcer', 'process', 'scompars', 'malatti', 'drog', 'sequestr', 'ucrain', 'russi', 'putin', 'zelensk', 'israel', 'gaza', 'hamas', 'conflitt']
 
@@ -67,6 +66,13 @@ PAROLE_NEGATIVE_ES = ['muert', 'asesinat', 'crisis', 'tragedia', 'accident', 'gu
 PAROLE_POSITIVE_FR = ['découverte', 'succès', 'guérison', 'sauvetage', 'victoire', 'innovation', 'progrès', 'paix', 'espoir', 'prix', 'amour', 'bonheur']
 PAROLE_NEGATIVE_FR = ['mort', 'crise', 'tragédie', 'accident', 'guerre', 'meurtre', 'arrestation', 'violence', 'attaque', 'victimes', 'disparu', 'prison', 'procès', 'maladie', 'ukraine', 'russie', 'zelensky', 'putin', 'israël', 'gaza', 'hamas', 'conflit']
 
+CATEGORIE = {
+    "Scienza & Tech": ["scoperta", "innovazione", "ricerca", "spazio", "tecnologia", "studio", "scienziat", "intelligenza artificiale", "medicina", "scienza", "astronomia"],
+    "Animali": ["cucciol", "cane", "cani", "gatto", "gatti", "animal", "fauna", "specie", "natura", "selvatic", "uccell"],
+    "Salute": ["guarigione", "salute", "benessere", "cura", "ospedale", "terapia", "medico", "pazient"],
+    "Società": ["solidarietà", "donazione", "beneficenza", "aiuto", "volontari", "comunità", "salvataggio", "diritti", "pace", "sociale"]
+}
+
 def analizza_notizia(testo, lingua):
     testo = testo.lower()
     if lingua == "en":
@@ -78,38 +84,51 @@ def analizza_notizia(testo, lingua):
     else:
         positive, negative = PAROLE_POSITIVE_IT, PAROLE_NEGATIVE_IT
 
-    # TOLLERANZA ZERO: Se trova mezza parola negativa, scarta tutto
     for parola in negative:
-        if re.search(rf'\b{parola}', testo): # Cerca la radice della parola (es. 'abus' blocca 'abuses')
+        if re.search(rf'\b{parola}', testo):
             return False
 
-    # Se è pulita, verifica che abbia almeno una parola positiva
     for parola in positive:
         if re.search(rf'\b{parola}\b', testo):
             return True
     return False
 
+def assegna_categoria(testo):
+    testo_lower = testo.lower()
+    for cat, parole in CATEGORIE.items():
+        for p in parole:
+            if re.search(rf'\b{p}', testo_lower):
+                return cat
+    return "Mondo"
+
 def traduci_testo_sicuro(testo, lingua_origine):
-    if lingua_origine == 'it': return testo
+    if lingua_origine == 'it': 
+        return testo
     
-    # 1. Tentativo API Diretta MyMemory (Resistente ai blocchi)
+    # 1. API MyMemory Autenticata tramite Email (Quota dedicata per prevenire il blocco)
     try:
         testo_codificato = urllib.parse.quote(testo)
-        url = f"https://api.mymemory.translated.net/get?q={testo_codificato}&langpair={lingua_origine}|it"
+        # Sostituita la richiesta anonima con una contenente l'indirizzo email
+        url = f"https://api.mymemory.translated.net/get?q={testo_codificato}&langpair={lingua_origine}|it&de=belle.notizie.app@gmail.com"
         req = urllib.request.Request(url, headers={'User-Agent': 'Mozilla/5.0'})
-        response = urllib.request.urlopen(req, timeout=5)
+        response = urllib.request.urlopen(req, timeout=10)
         data = json.loads(response.read().decode('utf-8'))
+        
         if data['responseStatus'] == 200:
-            return data['responseData']['translatedText']
-    except Exception:
-        pass
+            traduzione = data['responseData']['translatedText']
+            # Assicura che la traduzione non sia un messaggio d'errore della piattaforma
+            if traduzione and "MYMEMORY WARNING" not in traduzione:
+                return traduzione
+    except Exception as e:
+        print(f"Errore traduzione MyMemory: {e}")
 
-    # 2. Tentativo Google Translator (Fallback)
+    # 2. Tentativo secondario con GoogleTranslator
     try:
         trad = GoogleTranslator(source='auto', target='it').translate(testo)
-        if trad and "Error 500" not in trad: return trad
-    except Exception:
-        pass
+        if trad and "Error 500" not in trad: 
+            return trad
+    except Exception as e:
+        print(f"Errore traduzione Google: {e}")
         
     return testo
 
@@ -138,7 +157,6 @@ for feed_info in FEEDS:
 
             if not link or link in link_visti: continue
 
-            # Estrazione e formattazione della Data
             data_formattata = "Data sconosciuta"
             data_pubblicazione_str = entry.get('published_parsed') or entry.get('updated_parsed')
             if data_pubblicazione_str:
@@ -151,7 +169,10 @@ for feed_info in FEEDS:
 
             if analizza_notizia(titolo_originale, feed_info['lingua']):
                 titolo_tradotto = traduci_testo_sicuro(titolo_originale, feed_info['lingua'])
-                sleep(1) # Pausa cortesia per le API
+                categoria = assegna_categoria(titolo_tradotto)
+                
+                # Pausa di 2 secondi per ogni singola traduzione per prevenire i blocchi anti-bot
+                sleep(2)
                 
                 immagine = estrai_immagine(entry)
                 if not immagine: immagine = random.choice(IMMAGINI_FALLBACK)
@@ -161,11 +182,12 @@ for feed_info in FEEDS:
                     "link": link,
                     "fonte": feed_info['nome'],
                     "immagine": immagine,
-                    "data": data_formattata
+                    "data": data_formattata,
+                    "categoria": categoria
                 })
                 link_visti.add(link)
     except Exception as e:
-        print(f"Errore su {feed_info['nome']}: {e}")
+        print(f"Errore su feed {feed_info['nome']}: {e}")
 
 dati_finali = {
     "citazione": random.choice(CITAZIONI),
