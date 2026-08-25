@@ -57,9 +57,14 @@
         h1 span { color: var(--accent); }
         .quote { color: #fff; font-size: 1.2rem; font-weight: 800; background: rgba(255, 143, 171, 0.85); display: inline-block; padding: 12px 24px; border-radius: 30px; box-shadow: 0 4px 15px rgba(255, 143, 171, 0.4); margin-bottom: 20px;}
         
-        .zen-zone { background: rgba(255, 255, 255, 0.7); border-radius: 20px; padding: 20px; max-width: 600px; margin: 0 auto 40px auto; text-align: center; backdrop-filter: blur(5px); }
+        .zen-zone { background: rgba(255, 255, 255, 0.7); border-radius: 20px; padding: 20px; max-width: 600px; margin: 0 auto 30px auto; text-align: center; backdrop-filter: blur(5px); }
         .breathe-text { font-size: 1.1rem; color: #666; font-weight: 600; margin-top: 10px; }
         .curiosity-box { margin-top: 15px; font-size: 0.95rem; color: #0284c7; background: #e0f2fe; padding: 12px; border-radius: 12px; }
+
+        .tabs { display: flex; justify-content: center; flex-wrap: wrap; gap: 10px; margin-bottom: 30px; position: relative; z-index: 1; max-width: 800px; margin-left: auto; margin-right: auto; }
+        .tab-btn { background: rgba(255, 255, 255, 0.6); border: 2px solid transparent; padding: 8px 18px; border-radius: 20px; cursor: pointer; font-family: 'Nunito', sans-serif; font-weight: 700; color: var(--text-main); transition: all 0.3s ease; backdrop-filter: blur(5px); font-size: 0.95rem; }
+        .tab-btn:hover { background: rgba(255, 255, 255, 0.9); }
+        .tab-btn.active { background: var(--accent); color: white; box-shadow: 0 4px 10px rgba(255, 143, 171, 0.4); }
 
         #contenitore-notizie { display: grid; grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); gap: 24px; max-width: 1200px; margin: 0 auto; position: relative; z-index: 1; }
 
@@ -73,12 +78,11 @@
         .immagine-notizia { width: 100%; height: 190px; object-fit: cover; }
         .notizia-content { padding: 24px; display: flex; flex-direction: column; justify-content: space-between; flex-grow: 1; }
         
-        .meta-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; }
+        .meta-info { display: flex; justify-content: space-between; align-items: center; margin-bottom: 16px; flex-wrap: wrap; gap: 8px; }
 
-        .fonte { 
-            background-color: #fef08a; color: #854d0e; font-size: 0.8rem; 
-            text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 14px; border-radius: 20px; font-weight: 800;
-        }
+        .badges { display: flex; gap: 8px; align-items: center; }
+        .fonte { background-color: #fef08a; color: #854d0e; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 5px 12px; border-radius: 20px; font-weight: 800; }
+        .categoria-badge { background-color: #dbeafe; color: #1e40af; font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.05em; padding: 5px 12px; border-radius: 20px; font-weight: 800; }
 
         .data-notizia { font-size: 0.85rem; color: #9ca3af; font-weight: 600; }
 
@@ -105,54 +109,100 @@
         <div class="curiosity-box" id="curiosita-giornaliera">💡 Preparando una curiosità felice...</div>
     </div>
     
+    <div class="tabs" id="tabs-container">
+    </div>
+
     <div id="contenitore-notizie">
         <div class="loader">Cerco le notizie più belle per te... 🌻</div>
     </div>
 
     <script>
+        let tutteLeNotizie = [];
+
         fetch('notizie.json')
             .then(response => response.json())
             .then(dati => {
                 if (dati.citazione) document.getElementById('citazione-giornaliera').innerText = dati.citazione;
                 if (dati.curiosita) document.getElementById('curiosita-giornaliera').innerHTML = "💡 <b>Lo sapevi?</b> " + dati.curiosita;
 
-                const arrayNotizie = Array.isArray(dati) ? dati : dati.notizie;
+                tutteLeNotizie = Array.isArray(dati) ? dati : dati.notizie;
                 const contenitore = document.getElementById('contenitore-notizie');
-                contenitore.innerHTML = '';
+                const tabsContainer = document.getElementById('tabs-container');
                 
-                if(!arrayNotizie || arrayNotizie.length === 0) {
+                if(!tutteLeNotizie || tutteLeNotizie.length === 0) {
                     contenitore.innerHTML = '<div class="loader">Nessuna nuova notizia positiva trovata al momento. Goditi questa giornata meravigliosa! 🌈</div>';
                     return;
                 }
 
-                arrayNotizie.forEach(notizia => {
-                    const tagImmagine = notizia.immagine 
-                        ? `<a href="${notizia.link}" target="_blank" rel="noopener noreferrer"><img src="${notizia.immagine}" class="immagine-notizia" alt="Immagine articolo" loading="lazy"></a>`
-                        : ``;
-                    
-                    const dataRender = notizia.data ? `<span class="data-notizia">${notizia.data}</span>` : ``;
-
-                    contenitore.innerHTML += `
-                        <div class="notizia">
-                            ${tagImmagine}
-                            <div class="notizia-content">
-                                <div>
-                                    <div class="meta-info">
-                                        <span class="fonte">${notizia.fonte}</span>
-                                        ${dataRender}
-                                    </div>
-                                    <a class="titolo-link" href="${notizia.link}" target="_blank" rel="noopener noreferrer">${notizia.titolo}</a>
-                                </div>
-                                <a href="${notizia.link}" target="_blank" rel="noopener noreferrer" class="leggi-tutto">Leggi l'articolo &rarr;</a>
-                            </div>
-                        </div>
-                    `;
+                const categorie = new Set(["Tutte"]);
+                tutteLeNotizie.forEach(n => {
+                    if(n.categoria) categorie.add(n.categoria);
                 });
+
+                categorie.forEach(cat => {
+                    const btn = document.createElement('button');
+                    btn.className = 'tab-btn' + (cat === 'Tutte' ? ' active' : '');
+                    btn.innerText = cat;
+                    btn.onclick = () => filtraNotizie(cat, btn);
+                    tabsContainer.appendChild(btn);
+                });
+
+                mostraNotizie(tutteLeNotizie);
             })
             .catch(error => {
                 document.getElementById('contenitore-notizie').innerHTML = '<div class="loader">Impossibile caricare le notizie in questo momento. 🌸</div>';
                 document.getElementById('citazione-giornaliera').innerText = 'Respira e rilassati.';
             });
+
+        function filtraNotizie(categoria, btn) {
+            document.querySelectorAll('.tab-btn').forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            if(categoria === 'Tutte') {
+                mostraNotizie(tutteLeNotizie);
+            } else {
+                const filtrate = tutteLeNotizie.filter(n => n.categoria === categoria);
+                mostraNotizie(filtrate);
+            }
+        }
+
+        function mostraNotizie(notizie) {
+            const contenitore = document.getElementById('contenitore-notizie');
+            contenitore.innerHTML = '';
+
+            if(notizie.length === 0) {
+                contenitore.innerHTML = '<div class="loader">Nessuna notizia in questa categoria. 🌻</div>';
+                return;
+            }
+
+            notizie.forEach(notizia => {
+                const tagImmagine = notizia.immagine 
+                    ? `<a href="${notizia.link}" target="_blank" rel="noopener noreferrer"><img src="${notizia.immagine}" class="immagine-notizia" alt="Immagine articolo" loading="lazy"></a>`
+                    : ``;
+                
+                const dataRender = notizia.data ? `<span class="data-notizia">${notizia.data}</span>` : ``;
+                const catBadge = notizia.categoria ? `<span class="categoria-badge">${notizia.categoria}</span>` : ``;
+
+                contenitore.innerHTML += `
+                    <div class="notizia">
+                        ${tagImmagine}
+                        <div class="notizia-content">
+                            <div>
+                                <div class="meta-info">
+                                    <div class="badges">
+                                        <span class="fonte">${notizia.fonte}</span>
+                                        ${catBadge}
+                                    </div>
+                                    ${dataRender}
+                                </div>
+                                <a class="titolo-link" href="${notizia.link}" target="_blank" rel="noopener noreferrer">${notizia.titolo}</a>
+                            </div>
+                            <a href="${notizia.link}" target="_blank" rel="noopener noreferrer" class="leggi-tutto">Leggi l'articolo &rarr;</a>
+                        </div>
+                    </div>
+                `;
+            });
+        }
     </script>
 </body>
 </html>
