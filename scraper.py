@@ -1,39 +1,39 @@
 import feedparser
 import json
 from deep_translator import GoogleTranslator
+from transformers import pipeline
 
-# Elenco fonti RSS
+print("Caricamento modello NLP in corso...")
+# Inizializza il modello NLP multilingua. Valuta il sentiment da 1 a 5 stelle.
+sentiment_analyzer = pipeline("sentiment-analysis", model="nlptown/bert-base-multilingual-uncased-sentiment")
+
+# Espansione fonti
 FEEDS = [
     {"nome": "ANSA", "url": "https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml", "lingua": "it"},
     {"nome": "Corriere della Sera", "url": "https://xml2.corriereobjects.it/rss/homepage.xml", "lingua": "it"},
     {"nome": "Repubblica", "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml", "lingua": "it"},
     {"nome": "Focus", "url": "https://www.focus.it/rss/tutte-le-notizie", "lingua": "it"},
+    {"nome": "Il Sole 24 Ore", "url": "https://www.ilsole24ore.com/rss/italia.xml", "lingua": "it"},
+    {"nome": "Sky TG24", "url": "https://tg24.sky.it/rss/all.xml", "lingua": "it"},
     
     {"nome": "BBC News", "url": "http://feeds.bbci.co.uk/news/world/rss.xml", "lingua": "en"},
     {"nome": "The Guardian", "url": "https://www.theguardian.com/world/rss", "lingua": "en"},
-   # {"nome": "Positive News", "url": "https://www.positive.news/feed/", "lingua": "en"},
-   # {"nome": "Good News Network", "url": "https://www.goodnewsnetwork.org/feed/", "lingua": "en"}
+    
+    {"nome": "Positive News", "url": "https://www.positive.news/feed/", "lingua": "en"},
+    {"nome": "Good News Network", "url": "https://www.goodnewsnetwork.org/feed/", "lingua": "en"}
 ]
 
-# Dizionari per il filtraggio
-PAROLE_POSITIVE_IT = ['scoperta', 'successo', 'crescita', 'guarigione', 'salvataggio', 'vittoria', 'innovazione', 'aiuto', 'progresso', 'pace', 'accordo', 'svolta', 'traguardo', 'solidarietà']
-PAROLE_NEGATIVE_IT = ['morti', 'crisi', 'tragedia', 'incidente', 'guerra', 'omicidio', 'arresto', 'crollo', 'paura', 'violenza', 'attacco', 'ucciso', 'vittime']
-
-PAROLE_POSITIVE_EN = ['breakthrough', 'discovery', 'success', 'healing', 'rescue', 'victory', 'innovation', 'progress', 'peace', 'milestone', 'hope', 'award', 'recovery']
-PAROLE_NEGATIVE_EN = ['death', 'killed', 'crisis', 'tragedy', 'accident', 'war', 'murder', 'arrest', 'collapse', 'fear', 'violence', 'attack', 'dead', 'casualty']
-
-def analizza_notizia(testo, lingua):
-    testo = testo.lower()
-    positive = PAROLE_POSITIVE_EN if lingua == "en" else PAROLE_POSITIVE_IT
-    negative = PAROLE_NEGATIVE_EN if lingua == "en" else PAROLE_NEGATIVE_IT
-
-    punteggio = 0
-    for parola in positive:
-        if parola in testo: punteggio += 1
-    for parola in negative:
-        if parola in testo: punteggio -= 2
-    
-    return punteggio > 0
+def analizza_notizia_nlp(testo):
+    try:
+        # Tronca il testo a 512 token per limitazioni tecniche del modello base
+        risultato = sentiment_analyzer(testo[:512])[0] 
+        label = risultato['label']
+        # Estrae il numero di stelle (es. "5 stars" -> 5)
+        stelle = int(label.split()[0])
+        return stelle >= 4
+    except Exception as e:
+        print(f"Errore NLP: {e}")
+        return False
 
 print("Inizio scansione feed...")
 notizie_filtrate = []
@@ -51,15 +51,14 @@ for feed_info in FEEDS:
 
             is_positive_source = feed_info['nome'] in ["Positive News", "Good News Network"]
 
-            if is_positive_source or analizza_notizia(titolo_originale, feed_info['lingua']):
+            if is_positive_source or analizza_notizia_nlp(titolo_originale):
                 
-                # Modulo di Traduzione
                 titolo_da_salvare = titolo_originale
                 if feed_info['lingua'] != 'it':
                     try:
                         titolo_da_salvare = GoogleTranslator(source='auto', target='it').translate(titolo_originale)
                     except Exception as e:
-                        print(f"Errore di traduzione per '{titolo_originale}': {e}")
+                        print(f"Errore di traduzione: {e}")
                 
                 notizie_filtrate.append({
                     "titolo": titolo_da_salvare,
@@ -70,7 +69,6 @@ for feed_info in FEEDS:
     except Exception as e:
         print(f"Errore durante l'elaborazione di {feed_info['nome']}: {e}")
 
-# Scrittura su file JSON
 with open('notizie.json', 'w', encoding='utf-8') as f:
     json.dump(notizie_filtrate, f, ensure_ascii=False, indent=2)
 
