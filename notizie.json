@@ -1,12 +1,20 @@
 {
-  "citazione": "Sii gentile con te stesso oggi. Te lo meriti. ✨",
-  "curiosita": "Le lontre di mare si tengono per mano mentre dormono per non separarsi.",
+  "citazione": "Prenditi una pausa. Il mondo può aspettare. ☕",
+  "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
   "notizie": [
+    {
+      "titolo": "Italia con la Slovacchia per la quarta vittoria, gli Europei di volley in diretta",
+      "link": "https://www.repubblica.it/sport/volley/2026/08/25/diretta/italia_slovacchia_europei_volley_diretta-425546450/",
+      "fonte": "Repubblica",
+      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
+      "data": "25/08/2026",
+      "categoria": "Mondo"
+    },
     {
       "titolo": "Costa in tour nelle capitali Ue: “Difesa comune entro il 2030 per avere la pace in Europa”",
       "link": "https://www.repubblica.it/esteri/2026/08/25/news/antonio_costa_tour_capitali_ue_difesa_comune_entro_2030_per_paceeuropa-425546338/",
       "fonte": "Repubblica",
-      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
       "data": "25/08/2026",
       "categoria": "Società"
     },
