@@ -1,15 +1,14 @@
 import feedparser
 import json
+import urllib.parse
 from datetime import datetime, timedelta, timezone
-from time import mktime
+from time import mktime, sleep
 from deep_translator import GoogleTranslator
 from transformers import pipeline
 
 print("Caricamento modello NLP in corso...")
-# Inizializza il modello NLP multilingua
 sentiment_analyzer = pipeline("sentiment-analysis", model="nlptown/bert-base-multilingual-uncased-sentiment")
 
-# Elenco espanso di fonti RSS (Italiane e Internazionali)
 FEEDS = [
     # ITALIA
     {"nome": "ANSA", "url": "https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml", "lingua": "it"},
@@ -43,7 +42,6 @@ def analizza_notizia_nlp(testo):
         stelle = int(label.split()[0])
         return stelle >= 4
     except Exception as e:
-        print(f"Errore NLP: {e}")
         return False
 
 def estrai_immagine(entry):
@@ -60,8 +58,6 @@ def estrai_immagine(entry):
 print("Inizio scansione feed...")
 notizie_filtrate = []
 link_visti = set()
-
-# Calcolo della data limite (30 giorni fa) rispetto all'orario attuale (UTC)
 limite_temporale = datetime.now(timezone.utc) - timedelta(days=30)
 
 for feed_info in FEEDS:
@@ -74,28 +70,34 @@ for feed_info in FEEDS:
             if not link or link in link_visti:
                 continue
 
-            # Analisi della data di pubblicazione
             data_pubblicazione_str = entry.get('published_parsed') or entry.get('updated_parsed')
             if data_pubblicazione_str:
                 try:
                     dt_pubblicazione = datetime.fromtimestamp(mktime(data_pubblicazione_str), timezone.utc)
                     if dt_pubblicazione < limite_temporale:
-                        # Se la notizia è più vecchia di 30 giorni, viene scartata
                         continue
                 except Exception:
-                    pass # Ignora errori di parsing della singola data e procedi
+                    pass
 
-            # Passa il testo al modello AI
             if analizza_notizia_nlp(titolo_originale):
                 
                 titolo_da_salvare = titolo_originale
                 if feed_info['lingua'] != 'it':
                     try:
-                        titolo_da_salvare = GoogleTranslator(source='auto', target='it').translate(titolo_originale)
+                        traduzione = GoogleTranslator(source='auto', target='it').translate(titolo_originale)
+                        # Controllo validità traduzione
+                        if traduzione and "Error 500" not in traduzione and "<html" not in traduzione.lower():
+                            titolo_da_salvare = traduzione
+                        sleep(1) # Pausa per non bloccare i server di Google
                     except Exception as e:
-                        print(f"Errore di traduzione per '{titolo_originale}': {e}")
+                        print(f"Errore di traduzione: {e}")
                 
                 immagine = estrai_immagine(entry)
+                
+                # Se non c'è l'immagine originale, ne creiamo una pertinente con l'AI
+                if not immagine:
+                    titolo_codificato = urllib.parse.quote(titolo_da_salvare)
+                    immagine = f"https://image.pollinations.ai/prompt/notizia,%20{titolo_codificato}?width=800&height=400&nologo=true"
                 
                 notizie_filtrate.append({
                     "titolo": titolo_da_salvare,
