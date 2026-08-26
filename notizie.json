@@ -1,7 +1,16 @@
 {
-  "citazione": "Fai un respiro profondo. Tutto andrà bene. 🌿",
-  "curiosita": "In Svezia esiste la 'Fika': prendersi una pausa caffè per godersi le cose belle della vita.",
+  "citazione": "Prenditi una pausa. Il mondo può aspettare. ☕",
+  "curiosita": "Sapevi che le mucche hanno migliori amiche e si rilassano quando sono vicine?",
   "notizie": [
+    {
+      "titolo": "Donald Trump confortato dalla vittoria di Darline Graham, una sua protetta, in una primaria in South Carolina",
+      "link": "https://www.lemonde.fr/international/article/2026/08/26/apres-une-serie-de-revers-donald-trump-conforte-par-la-victoire-d-une-de-ses-protegees-dans-une-primaire-en-caroline-du-sud_6756944_3210.html",
+      "fonte": "Le Monde",
+      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
+      "data": "26/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Sorella di un senatore repubblicano deceduto a luglio, Darline Graham si è imposta nonostante le critiche sulla sua inesperienza, offrendo soddisfazione a Donald..."
+    },
     {
       "titolo": "A Darline Graham le primarie in South Carolina, vittoria per Trump",
       "link": "https://www.ansa.it/sito/notizie/topnews/2026/08/26/a-darline-graham-le-primarie-in-south-carolina-vittoria-per-trump_b8c97f61-9062-4391-b229-49ad7d4bbf7a.html",
