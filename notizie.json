@@ -1,0 +1,87 @@
+{
+  "citazione": "Sii gentile con te stesso oggi. Te lo meriti. ✨",
+  "curiosita": "Le lontre di mare si tengono per mano mentre dormono per non separarsi.",
+  "notizie": [
+    {
+      "titolo": "L'economia Usa cresce dell'1,5% nel secondo trimestre",
+      "link": "https://www.ansa.it/sito/notizie/topnews/2026/08/26/leconomia-usa-cresce-dell15-nel-secondo-trimestre_f0825145-70c8-4b63-bd55-2796144fca55.html",
+      "fonte": "ANSA",
+      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      "data": "26/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Confermata la prima stima, crescita rallenta rispetto a gennaio-marzo"
+    },
+    {
+      "titolo": "“I miei genitori tesserati da Fn di Vannacci a loro insaputa”: il caso in Friuli Venezia Giulia",
+      "link": "https://www.repubblica.it/politica/2026/08/26/news/vannacci_futuro_nazionale_caso_tesseramento_a_loro_insaputa_friuli_venezia_giulia-425547551/",
+      "fonte": "Repubblica",
+      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
+      "data": "26/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Sono una coppia di origini romene. La scoperta fatta dal figlio. I precedenti recenti"
+    },
+    {
+      "titolo": "Tavoni: “Per il clima affondano edilizia e agricoltura, danni per 50 miliardi”",
+      "link": "https://www.repubblica.it/cronaca/2026/08/26/news/clima_intervista_massimo_tavoni_clima-425547140/",
+      "fonte": "Repubblica",
+      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+      "data": "25/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Intervista all’esperto di economia del cambiamento climatico: “Il caldo non è solo un fenomeno meteorologico: rallenta la crescita"
+    },
+    {
+      "titolo": "Fabrizio Valente, il bagnino annegato per salvare due turisti. ?I colleghi: «Era un uomo di cuore»",
+      "link": "https://www.ilmessaggero.it/italia/fabrizio_valente_bagnino_annegato_andora_chi_era-9725324.html",
+      "fonte": "Il Messaggero",
+      "immagine": "https://statics.cedscdn.it/photos/MED/2026/08/25/9725324_25220219_6a8db639be9c0.r_d.528_340_14762.jpg",
+      "data": "Data sconosciuta",
+      "categoria": "Mondo",
+      "sommario": "Quando ha visto i due bagnanti annaspare, non ha esitato nemmeno un secondo. Per senso del dovere e abnegazione, nonostante fosse affaticato da un altro salv..."
+    },
+    {
+      "titolo": "«Ci siamo innamorati grazie a un volo in ritardo. Ora vogliamo regalarci il matrimonio che non abbiamo avuto per colpa del Covid»",
+      "link": "https://www.ilmessaggero.it/italia/innamorati_in_volo_matrimonio_saltato_covid-9725112.html",
+      "fonte": "Il Messaggero",
+      "immagine": "https://statics.cedscdn.it/photos/MED/2026/08/25/9725112_25182341_innamorati_volo.jpg",
+      "data": "Data sconosciuta",
+      "categoria": "Mondo",
+      "sommario": "Il loro amore è sbocciato per caso durante una vacanza in Giamaica, si sono sposati nel 2020 in piena pandemia e oggi lanciano un appello per coronare un alt..."
+    },
+    {
+      "titolo": "Il cuore, la speranza e la ferma determinazione dietro un'eredità musicale",
+      "link": "https://www.bbc.co.uk/news/articles/c74k8zwvez0o?at_medium=RSS&at_campaign=rss",
+      "fonte": "BBC News",
+      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
+      "data": "26/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Il corrispondente musicale della BBC Mark Savage ripercorre l'eredità dell '\"insostituibile\" cantante scomparso."
+    },
+    {
+      "titolo": "Speranza e preoccupazione si mescolano tra gli abitanti dell&#39;Ohio in vista del &quot;datacenter più grande del mondo&quot;.",
+      "link": "https://www.theguardian.com/us-news/2026/aug/26/ohio-datacenter-reaction",
+      "fonte": "The Guardian",
+      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
+      "data": "26/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Il data center di Piketon promette di generare migliaia di posti di lavoro, ma i gruppi ambientalisti esprimono preoccupazione per il progetto Su una strada tortuosa nascosta dietro le foreste in..."
+    },
+    {
+      "titolo": "Iran e Oman riferiscono sui progressi nei colloqui sullo Stretto di Hormuz",
+      "link": "https://www.nytimes.com/2026/08/26/world/middleeast/iran-oman-strait-hormuz.html",
+      "fonte": "New York Times",
+      "immagine": "https://static01.nyt.com/images/2026/08/26/multimedia/26oman-iran-talks-lgbt/26oman-iran-talks-lgbt-mediumSquareAt3X.jpg",
+      "data": "26/08/2026",
+      "categoria": "Mondo",
+      "sommario": "I due paesi hanno dichiarato che avrebbero creato una corsia di navigazione temporanea e bonificato le miniere nel corso d'acqua. I prezzi globali del petrolio sono scesi dopo l'annuncio congiunto."
+    },
+    {
+      "titolo": "Il \"Texas argentino\" può salvare l'economia del paese?",
+      "link": "https://www.nytimes.com/2026/08/24/world/americas/argentina-oil-patagonia-milei.html",
+      "fonte": "New York Times",
+      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      "data": "24/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Migliaia di argentini stanno affollando un remoto tratto della Patagonia, in cerca di lavoro con solo zaini, tende e la speranza che loro e il loro paese possano..."
+    }
+  ]
+}
