@@ -57,16 +57,16 @@ IMMAGINI_FALLBACK = [
 ]
 
 PAROLE_POSITIVE_IT = ['scoperta', 'successo', 'crescita', 'guarigione', 'salvataggio', 'vittoria', 'innovazione', 'aiuto', 'progresso', 'pace', 'accordo', 'svolta', 'traguardo', 'solidarietà', 'miracolo', 'donazione', 'rinascita', 'cucciolo', 'amore', 'felicità']
-PAROLE_NEGATIVE_IT = ['morti', 'crisi', 'tragedia', 'incidente', 'guerra', 'omicidio', 'arrest', 'croll', 'paura', 'violenz', 'attacc', 'uccis', 'vittim', 'condann', 'truff', 'sanzion', 'armi', 'missil', 'abus', 'ferit', 'decess', 'strag', 'carcer', 'process', 'scompars', 'malatti', 'drog', 'sequestr', 'ucrain', 'russi', 'putin', 'zelensk', 'israel', 'gaza', 'hamas', 'conflitt']
+PAROLE_NEGATIVE_IT = ['morti', 'crisi', 'tragedia', 'incidente', 'guerra', 'omicidio', 'arrest', 'croll', 'paura', 'violenz', 'attacc', 'uccis', 'vittim', 'condann', 'truff', 'sanzion', 'armi', 'missil', 'abus', 'ferit', 'decess', 'strag', 'carcer', 'process', 'scompars', 'malatti', 'drog', 'sequestr', 'ucrain', 'russi', 'putin', 'zelensk', 'israel', 'gaza', 'hamas', 'conflitt', 'politic', 'elezion', 'govern', 'parlament', 'partit', 'vot', 'sindac', 'ministr', 'premier', 'senat', 'candidat']
 
 PAROLE_POSITIVE_EN = ['breakthrough', 'discovery', 'success', 'healing', 'rescue', 'victory', 'innovation', 'progress', 'peace', 'milestone', 'hope', 'award', 'recovery', 'donation', 'charity', 'puppy', 'love', 'happiness']
-PAROLE_NEGATIVE_EN = ['death', 'kill', 'crisis', 'traged', 'accident', 'war', 'murder', 'arrest', 'collaps', 'fear', 'violen', 'attack', 'dead', 'casualt', 'fraud', 'sanction', 'weapon', 'missil', 'abus', 'missing', 'prison', 'jail', 'court', 'trial', 'kidnap', 'disease', 'ukrain', 'russia', 'putin', 'zelensk', 'israel', 'gaza', 'hamas', 'conflict']
+PAROLE_NEGATIVE_EN = ['death', 'kill', 'crisis', 'traged', 'accident', 'war', 'murder', 'arrest', 'collaps', 'fear', 'violen', 'attack', 'dead', 'casualt', 'fraud', 'sanction', 'weapon', 'missil', 'abus', 'missing', 'prison', 'jail', 'court', 'trial', 'kidnap', 'disease', 'ukrain', 'russia', 'putin', 'zelensk', 'israel', 'gaza', 'hamas', 'conflict', 'politic', 'election', 'govern', 'parliament', 'party', 'vote', 'mayor', 'minister', 'senat', 'candidat', 'democrat', 'republican']
 
 PAROLE_POSITIVE_ES = ['descubrimiento', 'éxito', 'curación', 'rescate', 'victoria', 'innovación', 'progreso', 'paz', 'esperanza', 'premio', 'amor', 'felicidad']
-PAROLE_NEGATIVE_ES = ['muert', 'asesinat', 'crisis', 'tragedia', 'accident', 'guerra', 'arrest', 'violencia', 'ataqu', 'víctim', 'desaparecid', 'prisión', 'cárcel', 'juici', 'enfermedad', 'ucrani', 'rusi', 'zelensk', 'putin', 'israel', 'gaza', 'hamas', 'conflict', 'armas', 'misil', 'tropas', 'ejércit', 'precio']
+PAROLE_NEGATIVE_ES = ['muert', 'asesinat', 'crisis', 'tragedia', 'accident', 'guerra', 'arrest', 'violencia', 'ataqu', 'víctim', 'desaparecid', 'prisión', 'cárcel', 'juici', 'enfermedad', 'ucrani', 'rusi', 'zelensk', 'putin', 'israel', 'gaza', 'hamas', 'conflict', 'armas', 'misil', 'tropas', 'ejércit', 'precio', 'polític', 'eleccion', 'gobiern', 'parlament', 'partid', 'vot', 'alcald', 'ministr', 'senad', 'candidat']
 
 PAROLE_POSITIVE_FR = ['découverte', 'succès', 'guérison', 'sauvetage', 'victoire', 'innovation', 'progrès', 'paix', 'espoir', 'prix', 'amour', 'bonheur']
-PAROLE_NEGATIVE_FR = ['mort', 'crise', 'tragédie', 'accident', 'guerre', 'meurtre', 'arrestation', 'violence', 'attaque', 'victimes', 'disparu', 'prison', 'procès', 'maladie', 'ukraine', 'russie', 'zelensky', 'putin', 'israël', 'gaza', 'hamas', 'conflit']
+PAROLE_NEGATIVE_FR = ['mort', 'crise', 'tragédie', 'accident', 'guerre', 'meurtre', 'arrestation', 'violence', 'attaque', 'victimes', 'disparu', 'prison', 'procès', 'maladie', 'ukraine', 'russie', 'zelensky', 'putin', 'israël', 'gaza', 'hamas', 'conflit', 'politiqu', 'élection', 'gouvernement', 'parlement', 'parti', 'vot', 'maire', 'ministr', 'sénat', 'candidat']
 
 CATEGORIE = {
     "Scienza & Tech": ["scoperta", "innovazione", "ricerca", "spazio", "tecnologia", "studio", "scienziat", "intelligenza artificiale", "medicina", "scienza", "astronomia"],
