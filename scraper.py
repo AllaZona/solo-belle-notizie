@@ -57,16 +57,16 @@ IMMAGINI_FALLBACK = [
 ]
 
 PAROLE_POSITIVE_IT = ['scoperta', 'successo', 'crescita', 'guarigione', 'salvataggio', 'vittoria', 'innovazione', 'aiuto', 'progresso', 'pace', 'accordo', 'svolta', 'traguardo', 'solidarietà', 'miracolo', 'donazione', 'rinascita', 'cucciolo', 'amore', 'felicità']
-PAROLE_NEGATIVE_IT = ['morti', 'crisi', 'tragedia', 'incidente', 'guerra', 'omicidio', 'arrest', 'croll', 'paura', 'violenz', 'attacc', 'uccis', 'vittim', 'condann', 'truff', 'sanzion', 'armi', 'missil', 'abus', 'ferit', 'decess', 'strag', 'carcer', 'process', 'scompars', 'malatti', 'drog', 'sequestr', 'ucrain', 'russi', 'putin', 'zelensk', 'israel', 'gaza', 'hamas', 'conflitt', 'politic', 'elezion', 'govern', 'parlament', 'partit', 'vot', 'sindac', 'ministr', 'premier', 'senat', 'candidat']
+PAROLE_NEGATIVE_IT = ['morti', 'crisi', 'tragedia', 'incidente', 'guerra', 'omicidio', 'arrest', 'croll', 'paura', 'violenz', 'attacc', 'uccis', 'vittim', 'condann', 'truff', 'sanzion', 'armi', 'missil', 'abus', 'ferit', 'decess', 'strag', 'carcer', 'process', 'scompars', 'malatti', 'drog', 'sequestr', 'ucrain', 'russi', 'putin', 'zelensk', 'israel', 'gaza', 'hamas', 'conflitt', 'politic', 'elezion', 'govern', 'parlament', 'partit', 'vot', 'sindac', 'ministr', 'premier', 'senat', 'candidat', 'trump', 'biden', 'harris', 'meloni', 'schlein', 'salvini', 'conte', 'primarie', 'repubblican', 'democratic', 'destra', 'sinistra']
 
 PAROLE_POSITIVE_EN = ['breakthrough', 'discovery', 'success', 'healing', 'rescue', 'victory', 'innovation', 'progress', 'peace', 'milestone', 'hope', 'award', 'recovery', 'donation', 'charity', 'puppy', 'love', 'happiness']
-PAROLE_NEGATIVE_EN = ['death', 'kill', 'crisis', 'traged', 'accident', 'war', 'murder', 'arrest', 'collaps', 'fear', 'violen', 'attack', 'dead', 'casualt', 'fraud', 'sanction', 'weapon', 'missil', 'abus', 'missing', 'prison', 'jail', 'court', 'trial', 'kidnap', 'disease', 'ukrain', 'russia', 'putin', 'zelensk', 'israel', 'gaza', 'hamas', 'conflict', 'politic', 'election', 'govern', 'parliament', 'party', 'vote', 'mayor', 'minister', 'senat', 'candidat', 'democrat', 'republican']
+PAROLE_NEGATIVE_EN = ['death', 'kill', 'crisis', 'traged', 'accident', 'war', 'murder', 'arrest', 'collaps', 'fear', 'violen', 'attack', 'dead', 'casualt', 'fraud', 'sanction', 'weapon', 'missil', 'abus', 'missing', 'prison', 'jail', 'court', 'trial', 'kidnap', 'disease', 'ukrain', 'russia', 'putin', 'zelensk', 'israel', 'gaza', 'hamas', 'conflict', 'politic', 'election', 'govern', 'parliament', 'party', 'vote', 'mayor', 'minister', 'senat', 'candidat', 'democrat', 'republican', 'trump', 'biden', 'harris', 'primary', 'right-wing', 'left-wing']
 
 PAROLE_POSITIVE_ES = ['descubrimiento', 'éxito', 'curación', 'rescate', 'victoria', 'innovación', 'progreso', 'paz', 'esperanza', 'premio', 'amor', 'felicidad']
-PAROLE_NEGATIVE_ES = ['muert', 'asesinat', 'crisis', 'tragedia', 'accident', 'guerra', 'arrest', 'violencia', 'ataqu', 'víctim', 'desaparecid', 'prisión', 'cárcel', 'juici', 'enfermedad', 'ucrani', 'rusi', 'zelensk', 'putin', 'israel', 'gaza', 'hamas', 'conflict', 'armas', 'misil', 'tropas', 'ejércit', 'precio', 'polític', 'eleccion', 'gobiern', 'parlament', 'partid', 'vot', 'alcald', 'ministr', 'senad', 'candidat']
+PAROLE_NEGATIVE_ES = ['muert', 'asesinat', 'crisis', 'tragedia', 'accident', 'guerra', 'arrest', 'violencia', 'ataqu', 'víctim', 'desaparecid', 'prisión', 'cárcel', 'juici', 'enfermedad', 'ucrani', 'rusi', 'zelensk', 'putin', 'israel', 'gaza', 'hamas', 'conflict', 'armas', 'misil', 'tropas', 'ejércit', 'precio', 'polític', 'eleccion', 'gobiern', 'parlament', 'partid', 'vot', 'alcald', 'ministr', 'senad', 'candidat', 'trump', 'biden', 'harris', 'primarias', 'republican', 'demócrat', 'derecha', 'izquierda']
 
 PAROLE_POSITIVE_FR = ['découverte', 'succès', 'guérison', 'sauvetage', 'victoire', 'innovation', 'progrès', 'paix', 'espoir', 'prix', 'amour', 'bonheur']
-PAROLE_NEGATIVE_FR = ['mort', 'crise', 'tragédie', 'accident', 'guerre', 'meurtre', 'arrestation', 'violence', 'attaque', 'victimes', 'disparu', 'prison', 'procès', 'maladie', 'ukraine', 'russie', 'zelensky', 'putin', 'israël', 'gaza', 'hamas', 'conflit', 'politiqu', 'élection', 'gouvernement', 'parlement', 'parti', 'vot', 'maire', 'ministr', 'sénat', 'candidat']
+PAROLE_NEGATIVE_FR = ['mort', 'crise', 'tragédie', 'accident', 'guerre', 'meurtre', 'arrestation', 'violence', 'attaque', 'victimes', 'disparu', 'prison', 'procès', 'maladie', 'ukraine', 'russie', 'zelensky', 'putin', 'israël', 'gaza', 'hamas', 'conflit', 'politiqu', 'élection', 'gouvernement', 'parlement', 'parti', 'vot', 'maire', 'ministr', 'sénat', 'candidat', 'trump', 'biden', 'harris', 'primaire', 'républicain', 'démocrat', 'droite', 'gauche']
 
 CATEGORIE = {
     "Scienza & Tech": ["scoperta", "innovazione", "ricerca", "spazio", "tecnologia", "studio", "scienziat", "intelligenza artificiale", "medicina", "scienza", "astronomia"],
@@ -118,14 +118,14 @@ def traduci_testo_sicuro(testo, lingua_origine):
             traduzione = data['responseData']['translatedText']
             if traduzione and "MYMEMORY WARNING" not in traduzione:
                 return traduzione
-    except Exception as e:
+    except Exception:
         pass
 
     try:
         trad = GoogleTranslator(source='auto', target='it').translate(testo)
         if trad and "Error 500" not in trad: 
             return trad
-    except Exception as e:
+    except Exception:
         pass
         
     return testo
@@ -174,7 +174,7 @@ if os.path.exists('notizie.json'):
                     notizie_salvate.append(notiz)
                     link_visti.add(notiz.get('link', ''))
     except Exception as e:
-        print(f"Impossibile leggere il file precedente: {e}")
+        pass
 
 nuove_notizie = []
 
@@ -184,6 +184,10 @@ for feed_info in FEEDS:
         for entry in feed.entries:
             link = entry.get('link', '')
             titolo_originale = entry.get('title', '')
+            sommario_originale = entry.get('summary', entry.get('description', ''))
+            
+            # Combinazione di titolo e sommario per un'analisi completa
+            testo_completo = titolo_originale + " " + sommario_originale
 
             if not link or link in link_visti: continue
 
@@ -197,12 +201,12 @@ for feed_info in FEEDS:
                 except Exception:
                     pass
 
-            if analizza_notizia(titolo_originale, feed_info['lingua']):
+            # Analisi estesa al testo completo
+            if analizza_notizia(testo_completo, feed_info['lingua']):
                 titolo_tradotto = traduci_testo_sicuro(titolo_originale, feed_info['lingua'])
                 categoria = assegna_categoria(titolo_tradotto)
                 sleep(1)
                 
-                sommario_originale = entry.get('summary', entry.get('description', ''))
                 sommario_pulito = pulisci_anteprima(sommario_originale)
                 if len(sommario_pulito) > 160:
                     sommario_pulito = sommario_pulito[:157] + "..."
@@ -225,7 +229,7 @@ for feed_info in FEEDS:
                 })
                 link_visti.add(link)
     except Exception as e:
-        print(f"Errore su feed {feed_info['nome']}: {e}")
+        pass
 
 notizie_totali = nuove_notizie + notizie_salvate
 
@@ -238,4 +242,4 @@ dati_finali = {
 with open('notizie.json', 'w', encoding='utf-8') as f:
     json.dump(dati_finali, f, ensure_ascii=False, indent=2)
 
-print(f"Scansione terminata. Nuove notizie: {len(nuove_notizie)}. Notizie totali in memoria: {len(notizie_totali)}")
+print(f"Scansione terminata. Nuove notizie: {len(nuove_notizie)}. Notizie totali: {len(notizie_totali)}")
