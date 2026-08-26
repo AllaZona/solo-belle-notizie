@@ -1,7 +1,25 @@
 {
-  "citazione": "Sii gentile con te stesso oggi. Te lo meriti. ✨",
-  "curiosita": "Le lontre di mare si tengono per mano mentre dormono per non separarsi.",
+  "citazione": "Il sorriso è la curva che raddrizza ogni cosa. 😊",
+  "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
   "notizie": [
+    {
+      "titolo": "'Meta paga 16,7 miliardi nell'accordo con stati Usa per la dipendenza dai social'",
+      "link": "https://www.ansa.it/sito/notizie/topnews/2026/08/26/meta-paga-167-miliardi-nellaccordo-con-stati-usa-per-la-dipendenza_7efaa986-a8da-4dda-b57c-20e12fa83539.html",
+      "fonte": "ANSA",
+      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+      "data": "26/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Lo riporta l'agenzia Bloomberg"
+    },
+    {
+      "titolo": "Morrone (Lega): Tassare gli extraprofitti ai grandi gruppi bancari per dare un aiuto al Paese",
+      "link": "https://www.agi.it/vista-tv/video/2026-08-26/morrone-lega-tassare-gli-extraprofitti-ai-grandi-gruppi-bancari-per-dare-un-aiuto-al-paese-38711426/",
+      "fonte": "AGI",
+      "immagine": "https://images.agi.it/pictures/agi/agi/2026/08/26/134118278-b7a34a8f-1956-463d-a45f-0862fd6a10fa.jpg",
+      "data": "26/08/2026",
+      "categoria": "Società",
+      "sommario": "AGI/Vista - La video dichiarazione di Jacopo Morrone della Lega. Fonte: Agenzia Vista / Alexander Jakhnagiev"
+    },
     {
       "titolo": "L'economia Usa cresce dell'1,5% nel secondo trimestre",
       "link": "https://www.ansa.it/sito/notizie/topnews/2026/08/26/leconomia-usa-cresce-dell15-nel-secondo-trimestre_f0825145-70c8-4b63-bd55-2796144fca55.html",
