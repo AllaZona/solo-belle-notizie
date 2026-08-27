@@ -10,27 +10,23 @@ from datetime import datetime, timedelta, timezone
 from time import mktime, sleep
 from deep_translator import GoogleTranslator
 
+# Fonti dedicate a buone notizie, scienza, ambiente, animali e innovazione
 FEEDS = [
-    {"nome": "ANSA", "url": "https://www.ansa.it/sito/notizie/topnews/topnews_rss.xml", "lingua": "it"},
-    {"nome": "Corriere della Sera", "url": "https://xml2.corriereobjects.it/rss/homepage.xml", "lingua": "it"},
-    {"nome": "Repubblica", "url": "https://www.repubblica.it/rss/homepage/rss2.0.xml", "lingua": "it"},
+    # Fonti Italiane Tematiche
+    {"nome": "ANSA Scienza", "url": "https://www.ansa.it/canale_scienza_tecnica/notizie/scienza_tecnica_rss.xml", "lingua": "it"},
+    {"nome": "ANSA Ambiente", "url": "https://www.ansa.it/canale_ambiente/notizie/ambiente_rss.xml", "lingua": "it"},
     {"nome": "Focus", "url": "https://www.focus.it/rss/tutte-le-notizie", "lingua": "it"},
-    {"nome": "Il Sole 24 Ore", "url": "https://www.ilsole24ore.com/rss/italia.xml", "lingua": "it"},
-    {"nome": "Sky TG24", "url": "https://tg24.sky.it/rss/all.xml", "lingua": "it"},
-    {"nome": "La Stampa", "url": "https://www.lastampa.it/rss/italia", "lingua": "it"},
-    {"nome": "Il Messaggero", "url": "https://www.ilmessaggero.it/rss/italia.xml", "lingua": "it"},
-    {"nome": "Il Post", "url": "https://www.ilpost.it/feed/", "lingua": "it"},
     {"nome": "Wired Italia", "url": "https://www.wired.it/feed/rss", "lingua": "it"},
-    {"nome": "AGI", "url": "https://www.agi.it/rss", "lingua": "it"},
-    {"nome": "BBC News", "url": "http://feeds.bbci.co.uk/news/world/rss.xml", "lingua": "en"},
-    {"nome": "The Guardian", "url": "https://www.theguardian.com/world/rss", "lingua": "en"},
-    {"nome": "New York Times", "url": "https://rss.nytimes.com/services/xml/rss/nyt/World.xml", "lingua": "en"},
-    {"nome": "Washington Post", "url": "https://feeds.washingtonpost.com/rss/world", "lingua": "en"},
-    {"nome": "CNN", "url": "http://rss.cnn.com/rss/edition_world.rss", "lingua": "en"},
-    {"nome": "Al Jazeera", "url": "https://www.aljazeera.com/xml/rss/all.xml", "lingua": "en"},
-    {"nome": "Le Monde", "url": "https://www.lemonde.fr/international/rss_full.xml", "lingua": "fr"},
-    {"nome": "El Pais", "url": "https://feeds.elpais.com/mrss-s/pages/ep/site/elpais.com/section/internacional/portada", "lingua": "es"},
-    {"nome": "Der Spiegel", "url": "https://www.spiegel.de/international/index.rss", "lingua": "en"}
+    {"nome": "GreenMe", "url": "https://www.greenme.it/feed/", "lingua": "it"},
+    {"nome": "Rinnovabili.it", "url": "https://www.rinnovabili.it/feed/", "lingua": "it"},
+    
+    # Fonti Internazionali di Notizie Positive e Costruttive
+    {"nome": "Good News Network", "url": "https://www.goodnewsnetwork.org/feed/", "lingua": "en"},
+    {"nome": "Positive News", "url": "https://www.positive.news/feed/", "lingua": "en"},
+    {"nome": "Optimist Daily", "url": "https://www.optimistdaily.com/feed/", "lingua": "en"},
+    {"nome": "Good Good Good", "url": "https://www.goodgoodgood.co/articles?format=rss", "lingua": "en"},
+    {"nome": "Science Daily", "url": "https://www.sciencedaily.com/rss/top/science.xml", "lingua": "en"},
+    {"nome": "BBC Science", "url": "http://feeds.bbci.co.uk/news/science_and_environment/rss.xml", "lingua": "en"}
 ]
 
 CITAZIONI = [
@@ -56,40 +52,66 @@ IMMAGINI_FALLBACK = [
     "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80"
 ]
 
-PAROLE_POSITIVE_IT = ['scoperta', 'successo', 'crescita', 'guarigione', 'salvataggio', 'vittoria', 'innovazione', 'aiuto', 'progresso', 'pace', 'accordo', 'svolta', 'traguardo', 'solidarietà', 'miracolo', 'donazione', 'rinascita', 'cucciolo', 'amore', 'felicità']
-PAROLE_NEGATIVE_IT = ['morti', 'crisi', 'tragedia', 'incidente', 'guerra', 'omicidio', 'arrest', 'croll', 'paura', 'violenz', 'attacc', 'uccis', 'vittim', 'condann', 'truff', 'sanzion', 'armi', 'missil', 'abus', 'ferit', 'decess', 'strag', 'carcer', 'process', 'scompars', 'malatti', 'drog', 'sequestr', 'ucrain', 'russi', 'putin', 'zelensk', 'israel', 'gaza', 'hamas', 'conflitt', 'politic', 'elezion', 'govern', 'parlament', 'partit', 'vot', 'sindac', 'ministr', 'premier', 'senat', 'candidat', 'trump', 'biden', 'harris', 'meloni', 'schlein', 'salvini', 'conte', 'primarie', 'repubblican', 'democratic', 'destra', 'sinistra']
+# Parole positive rigorose (rimossi termini ambigui come 'aiuto', 'accordo', 'crescita', 'speranza')
+PAROLE_POSITIVE_IT = [
+    'scoperta', 'successo', 'guarigione', 'vittoria', 'innovazione', 
+    'progresso', 'traguardo', 'solidarietà', 'miracolo', 'donazione', 
+    'rinascita', 'cucciolo', 'amore', 'felicità', 'matrimonio', 'nozze', 
+    'riciclo', 'salvato', 'salvata', 'tutela', 'biodiversità', 'sostenibile'
+]
 
-PAROLE_POSITIVE_EN = ['breakthrough', 'discovery', 'success', 'healing', 'rescue', 'victory', 'innovation', 'progress', 'peace', 'milestone', 'hope', 'award', 'recovery', 'donation', 'charity', 'puppy', 'love', 'happiness']
-PAROLE_NEGATIVE_EN = ['death', 'kill', 'crisis', 'traged', 'accident', 'war', 'murder', 'arrest', 'collaps', 'fear', 'violen', 'attack', 'dead', 'casualt', 'fraud', 'sanction', 'weapon', 'missil', 'abus', 'missing', 'prison', 'jail', 'court', 'trial', 'kidnap', 'disease', 'ukrain', 'russia', 'putin', 'zelensk', 'israel', 'gaza', 'hamas', 'conflict', 'politic', 'election', 'govern', 'parliament', 'party', 'vote', 'mayor', 'minister', 'senat', 'candidat', 'democrat', 'republican', 'trump', 'biden', 'harris', 'primary', 'right-wing', 'left-wing']
+PAROLE_NEGATIVE_IT = [
+    'mort', 'decess', 'uccis', 'vittim', 'strag', 'omicid', 'femminicid', 
+    'annega', 'incidente', 'tragedia', 'crisi', 'croll', 'paura', 'violenz', 
+    'attacc', 'armi', 'missil', 'guerra', 'bomba', 'ucrain', 'russi', 'putin', 
+    'zelensk', 'israel', 'gaza', 'hamas', 'conflitt', 'politic', 'elezion', 
+    'govern', 'parlament', 'partit', 'vot', 'sindac', 'ministr', 'premier', 
+    'senat', 'candidat', 'trump', 'biden', 'harris', 'meloni', 'schlein', 
+    'salvini', 'conte', 'lega', 'vannacci', 'destra', 'sinistra', 'arrest', 
+    'carcer', 'process', 'condann', 'truff', 'sanzion', 'multa', 'tass', 
+    'banc', 'inflazion', 'dipendenz', 'drog', 'sequestr', 'abuso', 'danni', 
+    'preoccupaz', 'disoccupaz', 'falliment', 'scompars', 'malatti', 'tumore', 'cancro'
+]
 
-PAROLE_POSITIVE_ES = ['descubrimiento', 'éxito', 'curación', 'rescate', 'victoria', 'innovación', 'progreso', 'paz', 'esperanza', 'premio', 'amor', 'felicidad']
-PAROLE_NEGATIVE_ES = ['muert', 'asesinat', 'crisis', 'tragedia', 'accident', 'guerra', 'arrest', 'violencia', 'ataqu', 'víctim', 'desaparecid', 'prisión', 'cárcel', 'juici', 'enfermedad', 'ucrani', 'rusi', 'zelensk', 'putin', 'israel', 'gaza', 'hamas', 'conflict', 'armas', 'misil', 'tropas', 'ejércit', 'precio', 'polític', 'eleccion', 'gobiern', 'parlament', 'partid', 'vot', 'alcald', 'ministr', 'senad', 'candidat', 'trump', 'biden', 'harris', 'primarias', 'republican', 'demócrat', 'derecha', 'izquierda']
+PAROLE_POSITIVE_EN = [
+    'breakthrough', 'discovery', 'success', 'healing', 'victory', 
+    'innovation', 'progress', 'milestone', 'award', 'recovery', 
+    'donation', 'charity', 'puppy', 'love', 'happiness', 'wedding', 
+    'rescued', 'renewable', 'clean energy', 'restoration', 'conservation'
+]
 
-PAROLE_POSITIVE_FR = ['découverte', 'succès', 'guérison', 'sauvetage', 'victoire', 'innovation', 'progrès', 'paix', 'espoir', 'prix', 'amour', 'bonheur']
-PAROLE_NEGATIVE_FR = ['mort', 'crise', 'tragédie', 'accident', 'guerre', 'meurtre', 'arrestation', 'violence', 'attaque', 'victimes', 'disparu', 'prison', 'procès', 'maladie', 'ukraine', 'russie', 'zelensky', 'putin', 'israël', 'gaza', 'hamas', 'conflit', 'politiqu', 'élection', 'gouvernement', 'parlement', 'parti', 'vot', 'maire', 'ministr', 'sénat', 'candidat', 'trump', 'biden', 'harris', 'primaire', 'républicain', 'démocrat', 'droite', 'gauche']
+PAROLE_NEGATIVE_EN = [
+    'death', 'dead', 'kill', 'casualt', 'murder', 'drown', 'traged', 
+    'accident', 'crisis', 'collapse', 'fear', 'violen', 'attack', 'weapon', 
+    'missil', 'war', 'bomb', 'ukrain', 'russia', 'putin', 'zelensk', 
+    'israel', 'gaza', 'hamas', 'conflict', 'politic', 'election', 'govern', 
+    'parliament', 'party', 'vote', 'mayor', 'minister', 'senat', 'candidat', 
+    'trump', 'biden', 'harris', 'democrat', 'republican', 'arrest', 'prison', 
+    'jail', 'court', 'trial', 'condemn', 'fraud', 'sanction', 'fine', 
+    'tax', 'bank', 'inflation', 'addiction', 'drug', 'kidnap', 'abuse', 
+    'damage', 'concern', 'unemployment', 'bankruptcy', 'missing', 'disease', 'cancer'
+]
 
 CATEGORIE = {
-    "Scienza & Tech": ["scoperta", "innovazione", "ricerca", "spazio", "tecnologia", "studio", "scienziat", "intelligenza artificiale", "medicina", "scienza", "astronomia"],
-    "Animali": ["cucciol", "cane", "cani", "gatto", "gatti", "animal", "fauna", "specie", "natura", "selvatic", "uccell"],
-    "Salute": ["guarigione", "salute", "benessere", "cura", "ospedale", "terapia", "medico", "pazient"],
-    "Società": ["solidarietà", "donazione", "beneficenza", "aiuto", "volontari", "comunità", "salvataggio", "diritti", "pace", "sociale"]
+    "Scienza & Tech": ["scoperta", "innovazione", "ricerca", "spazio", "tecnologia", "studio", "scienziat", "intelligenza artificiale", "medicina", "scienza", "astronomia", "energia"],
+    "Animali": ["cucciol", "cane", "cani", "gatto", "gatti", "animal", "fauna", "specie", "natura", "selvatic", "uccell", "biodiversit"],
+    "Salute": ["guarigione", "salute", "benessere", "cura", "terapia", "medico"],
+    "Società": ["solidarietà", "donazione", "beneficenza", "volontari", "comunità", "matrimonio", "nozze", "sostenibil", "riciclo"]
 }
 
 def analizza_notizia(testo, lingua):
     testo = testo.lower()
     if lingua == "en":
         positive, negative = PAROLE_POSITIVE_EN, PAROLE_NEGATIVE_EN
-    elif lingua == "es":
-        positive, negative = PAROLE_POSITIVE_ES, PAROLE_NEGATIVE_ES
-    elif lingua == "fr":
-        positive, negative = PAROLE_POSITIVE_FR, PAROLE_NEGATIVE_FR
     else:
         positive, negative = PAROLE_POSITIVE_IT, PAROLE_NEGATIVE_IT
 
+    # Blocco immediato se presente qualsiasi parola negativa
     for parola in negative:
         if re.search(rf'\b{parola}', testo):
             return False
 
+    # Accettazione se presente almeno una parola esplicitamente positiva
     for parola in positive:
         if re.search(rf'\b{parola}\b', testo):
             return True
@@ -148,7 +170,7 @@ def pulisci_anteprima(testo):
     testo_pulito = testo_pulito.strip()
     return testo_pulito
 
-print("Inizio scansione feed...")
+print("Inizio scansione feed tematici...")
 notizie_salvate = []
 link_visti = set()
 limite_temporale = datetime.now(timezone.utc) - timedelta(days=7)
@@ -186,22 +208,22 @@ for feed_info in FEEDS:
             titolo_originale = entry.get('title', '')
             sommario_originale = entry.get('summary', entry.get('description', ''))
             
-            # Combinazione di titolo e sommario per un'analisi completa
             testo_completo = titolo_originale + " " + sommario_originale
 
-            if not link or link in link_visti: continue
+            if not link or link in link_visti: 
+                continue
 
             data_formattata = "Data sconosciuta"
             data_pubblicazione_str = entry.get('published_parsed') or entry.get('updated_parsed')
             if data_pubblicazione_str:
                 try:
                     dt_pubblicazione = datetime.fromtimestamp(mktime(data_pubblicazione_str), timezone.utc)
-                    if dt_pubblicazione < limite_temporale: continue
+                    if dt_pubblicazione < limite_temporale: 
+                        continue
                     data_formattata = dt_pubblicazione.strftime("%d/%m/%Y")
                 except Exception:
                     pass
 
-            # Analisi estesa al testo completo
             if analizza_notizia(testo_completo, feed_info['lingua']):
                 titolo_tradotto = traduci_testo_sicuro(titolo_originale, feed_info['lingua'])
                 categoria = assegna_categoria(titolo_tradotto)
@@ -216,7 +238,8 @@ for feed_info in FEEDS:
                     sleep(1.5)
                 
                 immagine = estrai_immagine(entry)
-                if not immagine: immagine = random.choice(IMMAGINI_FALLBACK)
+                if not immagine: 
+                    immagine = random.choice(IMMAGINI_FALLBACK)
                 
                 nuove_notizie.append({
                     "titolo": titolo_tradotto,
@@ -229,7 +252,7 @@ for feed_info in FEEDS:
                 })
                 link_visti.add(link)
     except Exception as e:
-        pass
+        print(f"Errore su feed {feed_info['nome']}: {e}")
 
 notizie_totali = nuove_notizie + notizie_salvate
 
@@ -242,4 +265,4 @@ dati_finali = {
 with open('notizie.json', 'w', encoding='utf-8') as f:
     json.dump(dati_finali, f, ensure_ascii=False, indent=2)
 
-print(f"Scansione terminata. Nuove notizie: {len(nuove_notizie)}. Notizie totali: {len(notizie_totali)}")
+print(f"Scansione terminata. Nuove: {len(nuove_notizie)}. Totali: {len(notizie_totali)}")
