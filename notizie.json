@@ -1,7 +1,25 @@
 {
-  "citazione": "Fai un respiro profondo. Tutto andrà bene. 🌿",
-  "curiosita": "Sapevi che le mucche hanno migliori amiche e si rilassano quando sono vicine?",
+  "citazione": "Sii gentile con te stesso oggi. Te lo meriti. ✨",
+  "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
   "notizie": [
+    {
+      "titolo": "Straordinario! È nato un cavallo di Przewalski nelle steppe del Kazakistan: è il primo in 200 anni",
+      "link": "https://www.greenme.it/animali/animali-selvatici/nato-cavallo-przewalski-kazakistan/",
+      "fonte": "GreenMe",
+      "immagine": "https://www.greenme.it/wp-content/uploads/2026/08/Cavallo-di-Przewalski-2.jpg",
+      "data": "28/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Nascita storica nel cuore dell'Asia centrale: il puledro di cavallo di Przewalski, figlio della giumenta Tessa e dello stallone Zorro, segna la rinascita del..."
+    },
+    {
+      "titolo": "Gli scienziati hanno rintracciato 4.500 animali e hanno scoperto un sorprendente effetto umano",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260827010517.htm",
+      "fonte": "Science Daily",
+      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      "data": "28/08/2026",
+      "categoria": "Scienza & Tech",
+      "sommario": "Gli scienziati che seguono migliaia di animali hanno scoperto che la nostra presenza fisica può rimodellarsi dove la fauna selvatica si muove e vive, a volte con la stessa forza di strade, città,..."
+    },
     {
       "titolo": "5 US Cities Hire Robot Called ‘Dax’ to Help Survey and Repair Sidewalks–Kids Love Him",
       "link": "https://www.goodnewsnetwork.org/5-us-cities-hire-robot-called-dax-to-help-survey-and-repair-sidewalks-kids-love-him/",
@@ -10,33 +28,6 @@
       "data": "27/08/2026",
       "categoria": "Mondo",
       "sommario": "I cittadini di tutta la nazione hanno riportato strane cifre sui marciapiedi della città. Sono bianchi, bassi e disumani. Ma questo oggetto volvente non identificato arriva ..."
-    },
-    {
-      "titolo": "L'azienda francese accende il più grande impianto di energia rinnovabile/stoccaggio dell'Africa per alimentare 200.000 case",
-      "link": "https://www.goodnewsnetwork.org/french-firm-switches-on-africas-largest-renewable-energy-storage-plant-to-power-200k-houses/",
-      "fonte": "Good News Network",
-      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
-      "data": "21/08/2026",
-      "categoria": "Scienza & Tech",
-      "sommario": "Il colosso francese dell'energia TotalEnergies ha recentemente inaugurato il più grande progetto ibrido di energia rinnovabile in Africa che genererà 400 gigawattora di energia..."
-    },
-    {
-      "titolo": "Prima lontra di fiume avvistata nel Bronx in 100 anni lungo il fiume Bronx",
-      "link": "https://www.goodnewsnetwork.org/first-river-otter-spotted-in-the-bronx-in-100-years-along-the-bronx-river/",
-      "fonte": "Good News Network",
-      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
-      "data": "21/08/2026",
-      "categoria": "Mondo",
-      "sommario": "Era il 23 giugno quando una freccia marrone pelosa passò davanti a una telecamera attivata dal movimento lungo il fiume Bronx e fece impazzire di eccitazione gli ambientalisti. È stato il..."
-    },
-    {
-      "titolo": "Il magnetismo nascosto all'interno degli atomi può spiegare i misteriosi raggi gamma",
-      "link": "https://www.sciencedaily.com/releases/2026/08/260820202849.htm",
-      "fonte": "Science Daily",
-      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
-      "data": "21/08/2026",
-      "categoria": "Mondo",
-      "sommario": "Per decenni, gli scienziati si sono chiesti perché alcuni nuclei atomici producano inaspettatamente un gran numero di raggi gamma a bassa energia. Un nuovo esperimento ha tracciato la ..."
     },
     {
       "titolo": "L'uomo salva la lontra del bambino con la rianimazione cardiopolmonare: \"Una vita è una vita, non importa di cosa si tratti\"",
