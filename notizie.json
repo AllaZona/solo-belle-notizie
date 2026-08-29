@@ -1,7 +1,16 @@
 {
-  "citazione": "Sii gentile con te stesso oggi. Te lo meriti. ✨",
+  "citazione": "Prenditi una pausa. Il mondo può aspettare. ☕",
   "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
   "notizie": [
+    {
+      "titolo": "Lo zoo coglie 21 lumache dall'estinzione e ne restituisce centinaia all'isola atlantica incontaminata (GUARDA)",
+      "link": "https://www.goodnewsnetwork.org/zoo-plucks-21-snails-from-extinction-and-returns-hundreds-to-pristine-atlantic-island-watch/",
+      "fonte": "Good News Network",
+      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      "data": "22/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Un programma di allevamento allo zoo di Chester in Inghilterra ha riportato centinaia di piccoli molluschi nella loro terra natale dopo che erano diventati così rari che potevano collettivamente..."
+    },
     {
       "titolo": "Straordinario! È nato un cavallo di Przewalski nelle steppe del Kazakistan: è il primo in 200 anni",
       "link": "https://www.greenme.it/animali/animali-selvatici/nato-cavallo-przewalski-kazakistan/",
@@ -73,15 +82,6 @@
       "data": "23/08/2026",
       "categoria": "Scienza & Tech",
       "sommario": "Tempi disperati richiedono misure disperate. Con le tradizionali fonti di finanziamento che affrontano tagli, The Rocky Mountain Biological Laboratory, che ha trascorso gli ultimi..."
-    },
-    {
-      "titolo": "Lo zoo coglie 21 lumache dall'estinzione e ne restituisce centinaia all'isola atlantica incontaminata (GUARDA)",
-      "link": "https://www.goodnewsnetwork.org/zoo-plucks-21-snails-from-extinction-and-returns-hundreds-to-pristine-atlantic-island-watch/",
-      "fonte": "Good News Network",
-      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
-      "data": "22/08/2026",
-      "categoria": "Mondo",
-      "sommario": "Un programma di allevamento allo zoo di Chester in Inghilterra ha riportato centinaia di piccoli molluschi nella loro terra natale dopo che erano diventati così rari che potevano collettivamente..."
     },
     {
       "titolo": "Il mondo ha raggiunto 3 terawatt di energia solare più velocemente di quanto chiunque avesse previsto",
