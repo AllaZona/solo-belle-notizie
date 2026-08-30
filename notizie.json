@@ -1,7 +1,34 @@
 {
-  "citazione": "Prenditi una pausa. Il mondo può aspettare. ☕",
-  "curiosita": "Le lontre di mare si tengono per mano mentre dormono per non separarsi.",
+  "citazione": "Il sorriso è la curva che raddrizza ogni cosa. 😊",
+  "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
   "notizie": [
+    {
+      "titolo": "Addio rifiuti elettronici: nasce il robot che li trasforma si compost naturale",
+      "link": "https://www.greenme.it/scienza-e-tecnologia/innovazioni-e-green-tech/addio-rifiuti-elettronici-nasce-il-robot-che-li-trasforma-si-compost-naturale/",
+      "fonte": "GreenMe",
+      "immagine": "https://www.greenme.it/wp-content/uploads/2026/03/Robot-biodegradabile.jpg",
+      "data": "30/08/2026",
+      "categoria": "Animali",
+      "sommario": "Un robot compostabile rivoluziona la tecnologia sostenibile: resiste a lungo, poi si degrada completamente senza impatto ambientale"
+    },
+    {
+      "titolo": "Gli scienziati scoprono un'enorme anomalia di calore nel profondo di Marte",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260828082336.htm",
+      "fonte": "Science Daily",
+      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      "data": "30/08/2026",
+      "categoria": "Scienza & Tech",
+      "sommario": "Marte ha un divario di temperatura nascosto, con il suo interno meridionale potenzialmente centinaia di gradi più caldo del nord e parzialmente fuso. La scoperta co..."
+    },
+    {
+      "titolo": "Una nuova ricetta sblocca i nanocristalli \"impossibili\" per LED, impianti e superconduttori",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260827010510.htm",
+      "fonte": "Science Daily",
+      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
+      "data": "30/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Gli scienziati hanno risolto un problema chimico di lunga data, creando nanocristalli da nitruri metallici duri che in precedenza erano estremamente difficili da produrre..."
+    },
     {
       "titolo": "Disastro Nepal, un nuova frana ha generato un lago di sbarramento, i soccorritori sono stati evacuati",
       "link": "https://www.greenme.it/ambiente/disastro-nepal-lago-sbarramento-frana-tibet/",
@@ -10,15 +37,6 @@
       "data": "30/08/2026",
       "categoria": "Mondo",
       "sommario": "In Nepal la situazione è ancora critica e a tratti disastrosa: un lago di sbarramento, con una quantità d’acqua sufficiente a riempire circa 1.000 piscine ol..."
-    },
-    {
-      "titolo": "Un \"interruttore on\" nascosto nel DNA umano è stato finalmente decodificato",
-      "link": "https://www.sciencedaily.com/releases/2026/08/260823014943.htm",
-      "fonte": "Science Daily",
-      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
-      "data": "23/08/2026",
-      "categoria": "Mondo",
-      "sommario": "I ricercatori hanno utilizzato l'intelligenza artificiale per scoprire la firma del DNA di un \"interruttore\" genetico chiave coinvolto nell'attivazione dei geni. Dopo aver analizzato circa 500.000 sequenze di DNA, il..."
     },
     {
       "titolo": "Il suolo rosso dell'Australia potrebbe nascondere un'enorme fonte di energia pulita",
