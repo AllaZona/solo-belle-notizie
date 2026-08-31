@@ -1,7 +1,43 @@
 {
   "citazione": "Il sorriso è la curva che raddrizza ogni cosa. 😊",
-  "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
+  "curiosita": "Le lontre di mare si tengono per mano mentre dormono per non separarsi.",
   "notizie": [
+    {
+      "titolo": "L’uccello “più pericoloso del mondo”? Ha una grossa cresta che diventa fluorescente ai raggi UV",
+      "link": "https://www.greenme.it/animali/animali-selvatici/uccello-piu-pericoloso-mondo-cresta-fluorescente/",
+      "fonte": "GreenMe",
+      "immagine": "https://www.greenme.it/wp-content/uploads/2026/08/Uccello-raggi-UV.jpg",
+      "data": "30/08/2026",
+      "categoria": "Animali",
+      "sommario": "Uno studio svela che il casco del casuario brilla alla luce ultravioletta: si tratta di un segnale per comunicare. Questa scoperta apre nuovi scenari sui din..."
+    },
+    {
+      "titolo": "Le mamme adorano questo rituale di iniziazione che le matricole devono affrontare in questa scuola superiore dell'Oklahoma",
+      "link": "https://www.goodnewsnetwork.org/heres-the-humiliating-initiation-ritual-freshmen-must-go-through-at-this-oklahoma-high-school/",
+      "fonte": "Good News Network",
+      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
+      "data": "24/08/2026",
+      "categoria": "Mondo",
+      "sommario": "I rituali di iniziazione scolastica possono essere imbarazzanti, rozzi e persino inquietanti, ma per un quattordicenne, nulla potrebbe essere peggio di ciò che viene richiesto loro, giorno 1..."
+    },
+    {
+      "titolo": "Buone notizie nella storia, 24 agosto",
+      "link": "https://www.goodnewsnetwork.org/events060824/",
+      "fonte": "Good News Network",
+      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
+      "data": "24/08/2026",
+      "categoria": "Mondo",
+      "sommario": "10 anni fa oggi, l'European Southern Observatory ha confermato l'esistenza di Proxima Centauri b, l'esopianeta più vicino alla Terra in orbita all'interno dell'abitudine..."
+    },
+    {
+      "titolo": "Un nastro spettrale di stelle rivela la materia oscura nascosta",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260823015000.htm",
+      "fonte": "Science Daily",
+      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+      "data": "24/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Un debole nastro di stelle intorno a una galassia lontana è diventato il primo ammasso stellare globulare mai identificato oltre la Via Lattea. Perché le stelle ..."
+    },
     {
       "titolo": "Addio rifiuti elettronici: nasce il robot che li trasforma si compost naturale",
       "link": "https://www.greenme.it/scienza-e-tecnologia/innovazioni-e-green-tech/addio-rifiuti-elettronici-nasce-il-robot-che-li-trasforma-si-compost-naturale/",
@@ -93,24 +129,6 @@
       "sommario": "L'Università della British Columbia ha preso rifiuti di legno di basso valore e li ha trasformati in \"schiuma di legno\" per sostituire la plastica negli imballaggi. Con una delle più grandi t..."
     },
     {
-      "titolo": "Le mamme adorano questo rituale di iniziazione che le matricole devono affrontare in questa scuola superiore dell'Oklahoma",
-      "link": "https://www.goodnewsnetwork.org/heres-the-humiliating-initiation-ritual-freshmen-must-go-through-at-this-oklahoma-high-school/",
-      "fonte": "Good News Network",
-      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "data": "24/08/2026",
-      "categoria": "Mondo",
-      "sommario": "I rituali di iniziazione scolastica possono essere imbarazzanti, rozzi e persino inquietanti, ma per un quattordicenne, nulla potrebbe essere peggio di ciò che viene richiesto loro, giorno 1..."
-    },
-    {
-      "titolo": "Buone notizie nella storia, 24 agosto",
-      "link": "https://www.goodnewsnetwork.org/events060824/",
-      "fonte": "Good News Network",
-      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "data": "24/08/2026",
-      "categoria": "Mondo",
-      "sommario": "10 anni fa oggi, l'European Southern Observatory ha confermato l'esistenza di Proxima Centauri b, l'esopianeta più vicino alla Terra in orbita all'interno dell'abitudine..."
-    },
-    {
       "titolo": "Il mondo ha raggiunto 3 terawatt di energia solare più velocemente di quanto chiunque avesse previsto",
       "link": "https://www.optimistdaily.com/2026/08/the-world-hit-3-terawatts-of-solar-power-faster-than-anyone-predicted/",
       "fonte": "Optimist Daily",
@@ -136,15 +154,6 @@
       "data": "25/08/2026",
       "categoria": "Mondo",
       "sommario": "Gli scienziati hanno creato un catalizzatore altamente efficiente che scompone la lignina testarda dai rifiuti vegetali in sostanze chimiche utili in condizioni relativamente miti...."
-    },
-    {
-      "titolo": "Un nastro spettrale di stelle rivela la materia oscura nascosta",
-      "link": "https://www.sciencedaily.com/releases/2026/08/260823015000.htm",
-      "fonte": "Science Daily",
-      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
-      "data": "24/08/2026",
-      "categoria": "Mondo",
-      "sommario": "Un debole nastro di stelle intorno a una galassia lontana è diventato il primo ammasso stellare globulare mai identificato oltre la Via Lattea. Perché le stelle ..."
     }
   ]
 }
