@@ -1,33 +1,33 @@
 {
-  "citazione": "Il sorriso è la curva che raddrizza ogni cosa. 😊",
-  "curiosita": "Il battito cardiaco di due persone che si amano si sincronizza se si guardano negli occhi.",
+  "citazione": "Fai un respiro profondo. Tutto andrà bene. 🌿",
+  "curiosita": "Sapevi che le mucche hanno migliori amiche e si rilassano quando sono vicine?",
   "notizie": [
+    {
+      "titolo": "Perù autentico: alla scoperta delle Ande con l’esperienza di Evaneos",
+      "link": "https://www.greenme.it/viaggi/mondo/peru-autentico-alla-scoperta-delle-ande-con-lesperienza-di-evaneos/",
+      "fonte": "GreenMe",
+      "immagine": "https://www.greenme.it/wp-content/uploads/2026/08/peru.jpg",
+      "data": "31/08/2026",
+      "categoria": "Scienza & Tech",
+      "sommario": "Esiste un Perù che va oltre le classiche rotte turistiche e affolate, fatto di vette maestose, valli sacre e comunità che custodiscono silenziosamente tradiz..."
+    },
     {
       "titolo": "Le mamme adorano questo rituale di iniziazione che le matricole devono affrontare in questa scuola superiore dell'Oklahoma",
       "link": "https://www.goodnewsnetwork.org/heres-the-humiliating-initiation-ritual-freshmen-must-go-through-at-this-oklahoma-high-school/",
       "fonte": "Good News Network",
-      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
       "data": "24/08/2026",
       "categoria": "Mondo",
       "sommario": "I rituali di iniziazione scolastica possono essere imbarazzanti, rozzi e persino inquietanti, ma per un quattordicenne, nulla potrebbe essere peggio di ciò che viene richiesto loro, giorno 1..."
     },
     {
-      "titolo": "Buone notizie nella storia, 24 agosto",
-      "link": "https://www.goodnewsnetwork.org/events060824/",
-      "fonte": "Good News Network",
-      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
-      "data": "24/08/2026",
-      "categoria": "Mondo",
-      "sommario": "10 anni fa oggi, l'European Southern Observatory ha confermato l'esistenza di Proxima Centauri b, l'esopianeta più vicino alla Terra in orbita all'interno dell'abitudine..."
-    },
-    {
-      "titolo": "Un nastro spettrale di stelle rivela la materia oscura nascosta",
-      "link": "https://www.sciencedaily.com/releases/2026/08/260823015000.htm",
+      "titolo": "Gli scienziati scoprono che i diamanti possono generare elettricità",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260829035223.htm",
       "fonte": "Science Daily",
-      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
-      "data": "24/08/2026",
-      "categoria": "Mondo",
-      "sommario": "Un debole nastro di stelle intorno a una galassia lontana è diventato il primo ammasso stellare globulare mai identificato oltre la Via Lattea. Perché le stelle ..."
+      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
+      "data": "31/08/2026",
+      "categoria": "Scienza & Tech",
+      "sommario": "Si pensava che il diamante non fosse in grado di produrre elettricità attraverso la deformazione meccanica, ma le membrane diamantate flessibili ultrasottili hanno ora mostrato una forte..."
     },
     {
       "titolo": "L’uccello “più pericoloso del mondo”? Ha una grossa cresta che diventa fluorescente ai raggi UV",
