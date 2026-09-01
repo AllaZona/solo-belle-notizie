@@ -1,7 +1,16 @@
 {
-  "citazione": "Sii gentile con te stesso oggi. Te lo meriti. ✨",
-  "curiosita": "Le lontre di mare si tengono per mano mentre dormono per non separarsi.",
+  "citazione": "Ogni giorno è una nuova opportunità. 🌅",
+  "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
   "notizie": [
+    {
+      "titolo": "Il catalizzatore atomico sblocca il valore nascosto dei rifiuti vegetali",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260824065601.htm",
+      "fonte": "Science Daily",
+      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
+      "data": "25/08/2026",
+      "categoria": "Mondo",
+      "sommario": "Gli scienziati hanno creato un catalizzatore altamente efficiente che scompone la lignina testarda dai rifiuti vegetali in sostanze chimiche utili in condizioni relativamente miti...."
+    },
     {
       "titolo": "Allo zoo di Napoli è nata Parthenope, un’adorabile cucciola di giaguaro (ma vivrà per sempre lontana dal suo habitat)",
       "link": "https://www.greenme.it/animali/animali-selvatici/nata-parthenope-giaguaro-zoo-napoli/",
@@ -19,15 +28,6 @@
       "data": "31/08/2026",
       "categoria": "Mondo",
       "sommario": "Due adolescenti del sud della Florida con un debole per il volontariato hanno usato le loro competenze informatiche per costruire un'app che facilita la donazione di pizze dal ristorante locale..."
-    },
-    {
-      "titolo": "Le mamme adorano questo rituale di iniziazione che le matricole devono affrontare in questa scuola superiore dell'Oklahoma",
-      "link": "https://www.goodnewsnetwork.org/heres-the-humiliating-initiation-ritual-freshmen-must-go-through-at-this-oklahoma-high-school/",
-      "fonte": "Good News Network",
-      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "data": "24/08/2026",
-      "categoria": "Mondo",
-      "sommario": "I rituali di iniziazione scolastica possono essere imbarazzanti, rozzi e persino inquietanti, ma per un quattordicenne, nulla potrebbe essere peggio di ciò che viene richiesto loro, giorno 1..."
     },
     {
       "titolo": "I piedi fossili possono fuorviare gli scienziati sull'evoluzione umana",
@@ -156,15 +156,6 @@
       "sommario": "L'Università della British Columbia ha preso rifiuti di legno di basso valore e li ha trasformati in \"schiuma di legno\" per sostituire la plastica negli imballaggi. Con una delle più grandi t..."
     },
     {
-      "titolo": "Il mondo ha raggiunto 3 terawatt di energia solare più velocemente di quanto chiunque avesse previsto",
-      "link": "https://www.optimistdaily.com/2026/08/the-world-hit-3-terawatts-of-solar-power-faster-than-anyone-predicted/",
-      "fonte": "Optimist Daily",
-      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "data": "25/08/2026",
-      "categoria": "Scienza & Tech",
-      "sommario": "Dal TEAM EDITORIALE QUOTIDIANO OTTIMISTA Il primo terawatt di capacità solare globale ha richiesto quasi 68 anni per essere raggiunto. Il secondo è arrivato in circa due anni. Il ..."
-    },
-    {
       "titolo": "Il DNA di 190 anni rivela una specie nascosta di pangolino",
       "link": "https://www.sciencedaily.com/releases/2026/08/260826055500.htm",
       "fonte": "Science Daily",
@@ -172,15 +163,6 @@
       "data": "26/08/2026",
       "categoria": "Animali",
       "sommario": "Il DNA di un esemplare da museo di quasi 190 anni ha aiutato gli scienziati a confermare una distinta specie di pangolino himalayano che si nasconde in bella vista in Nepal e nel nord..."
-    },
-    {
-      "titolo": "Il catalizzatore atomico sblocca il valore nascosto dei rifiuti vegetali",
-      "link": "https://www.sciencedaily.com/releases/2026/08/260824065601.htm",
-      "fonte": "Science Daily",
-      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
-      "data": "25/08/2026",
-      "categoria": "Mondo",
-      "sommario": "Gli scienziati hanno creato un catalizzatore altamente efficiente che scompone la lignina testarda dai rifiuti vegetali in sostanze chimiche utili in condizioni relativamente miti...."
     }
   ]
 }
