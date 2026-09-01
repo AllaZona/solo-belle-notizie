@@ -1,7 +1,16 @@
 {
-  "citazione": "Fai un respiro profondo. Tutto andrà bene. 🌿",
-  "curiosita": "Il battito cardiaco di due persone che si amano si sincronizza se si guardano negli occhi.",
+  "citazione": "Prenditi una pausa. Il mondo può aspettare. ☕",
+  "curiosita": "In Svezia esiste la 'Fika': prendersi una pausa caffè per godersi le cose belle della vita.",
   "notizie": [
+    {
+      "titolo": "Un enorme pennacchio in profondità sotto l'Africa sta separando il continente",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260831015210.htm",
+      "fonte": "Science Daily",
+      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
+      "data": "01/09/2026",
+      "categoria": "Mondo",
+      "sommario": "Un vasto pennacchio che sale dal profondo della Terra potrebbe essere responsabile di movimenti misteriosi lungo la spaccatura dell'Africa orientale. La scoperta rivela come le forze nel profondo..."
+    },
     {
       "titolo": "Se lavori in ufficio queste sono le 15 cose che devi assolutamente avere per il tuo rientro a lavoro",
       "link": "https://www.greenme.it/lifestyle/lavoro-e-ufficio/5-cose-che-devi-assolutamente-avere-per-il-tuo-rientro-a-lavoro/",
