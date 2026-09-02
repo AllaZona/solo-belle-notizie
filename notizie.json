@@ -1,7 +1,16 @@
 {
-  "citazione": "Prenditi una pausa. Il mondo può aspettare. ☕",
-  "curiosita": "In Svezia esiste la 'Fika': prendersi una pausa caffè per godersi le cose belle della vita.",
+  "citazione": "Sii gentile con te stesso oggi. Te lo meriti. ✨",
+  "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
   "notizie": [
+    {
+      "titolo": "Il DNA di 190 anni rivela una specie nascosta di pangolino",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260826055500.htm",
+      "fonte": "Science Daily",
+      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
+      "data": "26/08/2026",
+      "categoria": "Animali",
+      "sommario": "Il DNA di un esemplare da museo di quasi 190 anni ha aiutato gli scienziati a confermare una distinta specie di pangolino himalayano che si nasconde in bella vista in Nepal e nel nord..."
+    },
     {
       "titolo": "Un enorme pennacchio in profondità sotto l'Africa sta separando il continente",
       "link": "https://www.sciencedaily.com/releases/2026/08/260831015210.htm",
@@ -190,15 +199,6 @@
       "data": "27/08/2026",
       "categoria": "Mondo",
       "sommario": "L'Università della British Columbia ha preso rifiuti di legno di basso valore e li ha trasformati in \"schiuma di legno\" per sostituire la plastica negli imballaggi. Con una delle più grandi t..."
-    },
-    {
-      "titolo": "Il DNA di 190 anni rivela una specie nascosta di pangolino",
-      "link": "https://www.sciencedaily.com/releases/2026/08/260826055500.htm",
-      "fonte": "Science Daily",
-      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
-      "data": "26/08/2026",
-      "categoria": "Animali",
-      "sommario": "Il DNA di un esemplare da museo di quasi 190 anni ha aiutato gli scienziati a confermare una distinta specie di pangolino himalayano che si nasconde in bella vista in Nepal e nel nord..."
     }
   ]
 }
