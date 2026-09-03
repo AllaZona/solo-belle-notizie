@@ -1,7 +1,16 @@
 {
-  "citazione": "Sii gentile con te stesso oggi. Te lo meriti. ✨",
-  "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
+  "citazione": "Ogni giorno è una nuova opportunità. 🌅",
+  "curiosita": "Il battito cardiaco di due persone che si amano si sincronizza se si guardano negli occhi.",
   "notizie": [
+    {
+      "titolo": "Riciclo auto, dal 6% al 51%: la lezione del progetto Car2Car di BMW",
+      "link": "https://www.rinnovabili.it/mobilita/automotive/riciclo-auto-il-progetto-car2car-porta-i-materiali-dal-6-al-51/",
+      "fonte": "Rinnovabili.it",
+      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
+      "data": "03/09/2026",
+      "categoria": "Società",
+      "sommario": "Dai test sull'acciaio alle sfide su vetro e plastica: i risultati della ricerca tedesca e le nuove regole dell'European ELV Regulation.\nL'articolo Riciclo au..."
+    },
     {
       "titolo": "5 US Cities Hire Robot Called ‘Dax’ to Help Survey and Repair Sidewalks–Kids Love Him",
       "link": "https://www.goodnewsnetwork.org/5-us-cities-hire-robot-called-dax-to-help-survey-and-repair-sidewalks-kids-love-him/",
@@ -19,15 +28,6 @@
       "data": "27/08/2026",
       "categoria": "Mondo",
       "sommario": "Ci vuole un villaggio per crescere un bambino, dicono. Bene, una storia ci arriva ora da Alert Bay nella British Columbia, dove ci è voluto un villaggio per salvarne uno. Era un ..."
-    },
-    {
-      "titolo": "La startup \"Schiuma di legno\" utilizza i rifiuti di registrazione come sostituto della plastica, producendo 400 libbre al giorno",
-      "link": "https://www.goodnewsnetwork.org/wood-foam-startup-uses-logging-waste-as-substitute-for-plastic-producing-400-pounds-daily/",
-      "fonte": "Good News Network",
-      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
-      "data": "27/08/2026",
-      "categoria": "Mondo",
-      "sommario": "L'Università della British Columbia ha preso rifiuti di legno di basso valore e li ha trasformati in \"schiuma di legno\" per sostituire la plastica negli imballaggi. Con una delle più grandi t..."
     },
     {
       "titolo": "“Se vuoi diventare madre, congela gli ovuli”: la nazionale spagnola finanzia la crioconservazione (ma alle calciatrici chiede di non fermarsi)",
