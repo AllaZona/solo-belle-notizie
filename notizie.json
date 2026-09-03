@@ -1,15 +1,15 @@
 {
   "citazione": "Ogni giorno è una nuova opportunità. 🌅",
-  "curiosita": "Il battito cardiaco di due persone che si amano si sincronizza se si guardano negli occhi.",
+  "curiosita": "Le lontre di mare si tengono per mano mentre dormono per non separarsi.",
   "notizie": [
     {
-      "titolo": "Riciclo auto, dal 6% al 51%: la lezione del progetto Car2Car di BMW",
-      "link": "https://www.rinnovabili.it/mobilita/automotive/riciclo-auto-il-progetto-car2car-porta-i-materiali-dal-6-al-51/",
-      "fonte": "Rinnovabili.it",
-      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
+      "titolo": "Cumuli di rifiuti e disordine alla Capanna Carrel sul Cervino: l’amara scoperta delle Guide Alpine sull’inciviltà ad alta quota",
+      "link": "https://www.greenme.it/ambiente/rifiuti-e-riciclaggio/cumuli-rifiuti-incuria-capanna-carrel/",
+      "fonte": "GreenMe",
+      "immagine": "https://www.greenme.it/wp-content/uploads/2026/09/Capanna-Carrel.jpg",
       "data": "03/09/2026",
-      "categoria": "Società",
-      "sommario": "Dai test sull'acciaio alle sfide su vetro e plastica: i risultati della ricerca tedesca e le nuove regole dell'European ELV Regulation.\nL'articolo Riciclo au..."
+      "categoria": "Scienza & Tech",
+      "sommario": "Lo storico bivacco a 3.835 metri Capanna Carrel sul Cervino ritrovato sommerso dai rifiuti dopo la sospensione temporanea delle ascensioni. L’appello delle G..."
     },
     {
       "titolo": "5 US Cities Hire Robot Called ‘Dax’ to Help Survey and Repair Sidewalks–Kids Love Him",
@@ -21,13 +21,13 @@
       "sommario": "I cittadini di tutta la nazione hanno riportato strane cifre sui marciapiedi della città. Sono bianchi, bassi e disumani. Ma questo oggetto volvente non identificato arriva ..."
     },
     {
-      "titolo": "L'uomo salva la lontra del bambino con la rianimazione cardiopolmonare: \"Una vita è una vita, non importa di cosa si tratti\"",
-      "link": "https://www.goodnewsnetwork.org/man-saves-baby-otter-with-cpr-a-lifes-a-life-no-matter-what-it-is/",
-      "fonte": "Good News Network",
-      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "data": "27/08/2026",
-      "categoria": "Mondo",
-      "sommario": "Ci vuole un villaggio per crescere un bambino, dicono. Bene, una storia ci arriva ora da Alert Bay nella British Columbia, dove ci è voluto un villaggio per salvarne uno. Era un ..."
+      "titolo": "Riciclo auto, dal 6% al 51%: la lezione del progetto Car2Car di BMW",
+      "link": "https://www.rinnovabili.it/mobilita/automotive/riciclo-auto-il-progetto-car2car-porta-i-materiali-dal-6-al-51/",
+      "fonte": "Rinnovabili.it",
+      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
+      "data": "03/09/2026",
+      "categoria": "Società",
+      "sommario": "Dai test sull'acciaio alle sfide su vetro e plastica: i risultati della ricerca tedesca e le nuove regole dell'European ELV Regulation.\nL'articolo Riciclo au..."
     },
     {
       "titolo": "“Se vuoi diventare madre, congela gli ovuli”: la nazionale spagnola finanzia la crioconservazione (ma alle calciatrici chiede di non fermarsi)",
