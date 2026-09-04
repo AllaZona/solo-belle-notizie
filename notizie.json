@@ -1,7 +1,16 @@
 {
-  "citazione": "Ogni giorno è una nuova opportunità. 🌅",
-  "curiosita": "Le lontre di mare si tengono per mano mentre dormono per non separarsi.",
+  "citazione": "Fai un respiro profondo. Tutto andrà bene. 🌿",
+  "curiosita": "In Svezia esiste la 'Fika': prendersi una pausa caffè per godersi le cose belle della vita.",
   "notizie": [
+    {
+      "titolo": "Gli scienziati hanno rintracciato 4.500 animali e hanno scoperto un sorprendente effetto umano",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260827010517.htm",
+      "fonte": "Science Daily",
+      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
+      "data": "28/08/2026",
+      "categoria": "Scienza & Tech",
+      "sommario": "Gli scienziati che seguono migliaia di animali hanno scoperto che la nostra presenza fisica può rimodellarsi dove la fauna selvatica si muove e vive, a volte con la stessa forza di strade, città,..."
+    },
     {
       "titolo": "Cumuli di rifiuti e disordine alla Capanna Carrel sul Cervino: l’amara scoperta delle Guide Alpine sull’inciviltà ad alta quota",
       "link": "https://www.greenme.it/ambiente/rifiuti-e-riciclaggio/cumuli-rifiuti-incuria-capanna-carrel/",
@@ -10,15 +19,6 @@
       "data": "03/09/2026",
       "categoria": "Scienza & Tech",
       "sommario": "Lo storico bivacco a 3.835 metri Capanna Carrel sul Cervino ritrovato sommerso dai rifiuti dopo la sospensione temporanea delle ascensioni. L’appello delle G..."
-    },
-    {
-      "titolo": "5 US Cities Hire Robot Called ‘Dax’ to Help Survey and Repair Sidewalks–Kids Love Him",
-      "link": "https://www.goodnewsnetwork.org/5-us-cities-hire-robot-called-dax-to-help-survey-and-repair-sidewalks-kids-love-him/",
-      "fonte": "Good News Network",
-      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
-      "data": "27/08/2026",
-      "categoria": "Mondo",
-      "sommario": "I cittadini di tutta la nazione hanno riportato strane cifre sui marciapiedi della città. Sono bianchi, bassi e disumani. Ma questo oggetto volvente non identificato arriva ..."
     },
     {
       "titolo": "Riciclo auto, dal 6% al 51%: la lezione del progetto Car2Car di BMW",
@@ -199,24 +199,6 @@
       "data": "29/08/2026",
       "categoria": "Scienza & Tech",
       "sommario": "I ricercatori hanno scoperto che le rocce ricche di ferro dell'Australia occidentale possono generare naturalmente idrogeno e che il processo può essere potenziato per produrre molto più grandi..."
-    },
-    {
-      "titolo": "Straordinario! È nato un cavallo di Przewalski nelle steppe del Kazakistan: è il primo in 200 anni",
-      "link": "https://www.greenme.it/animali/animali-selvatici/nato-cavallo-przewalski-kazakistan/",
-      "fonte": "GreenMe",
-      "immagine": "https://www.greenme.it/wp-content/uploads/2026/08/Cavallo-di-Przewalski-2.jpg",
-      "data": "28/08/2026",
-      "categoria": "Mondo",
-      "sommario": "Nascita storica nel cuore dell'Asia centrale: il puledro di cavallo di Przewalski, figlio della giumenta Tessa e dello stallone Zorro, segna la rinascita del..."
-    },
-    {
-      "titolo": "Gli scienziati hanno rintracciato 4.500 animali e hanno scoperto un sorprendente effetto umano",
-      "link": "https://www.sciencedaily.com/releases/2026/08/260827010517.htm",
-      "fonte": "Science Daily",
-      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
-      "data": "28/08/2026",
-      "categoria": "Scienza & Tech",
-      "sommario": "Gli scienziati che seguono migliaia di animali hanno scoperto che la nostra presenza fisica può rimodellarsi dove la fauna selvatica si muove e vive, a volte con la stessa forza di strade, città,..."
     }
   ]
 }
