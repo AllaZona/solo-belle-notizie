@@ -1,15 +1,15 @@
 {
-  "citazione": "Fai un respiro profondo. Tutto andrà bene. 🌿",
+  "citazione": "Il sorriso è la curva che raddrizza ogni cosa. 😊",
   "curiosita": "In Svezia esiste la 'Fika': prendersi una pausa caffè per godersi le cose belle della vita.",
   "notizie": [
     {
-      "titolo": "Gli scienziati hanno rintracciato 4.500 animali e hanno scoperto un sorprendente effetto umano",
-      "link": "https://www.sciencedaily.com/releases/2026/08/260827010517.htm",
-      "fonte": "Science Daily",
-      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
-      "data": "28/08/2026",
+      "titolo": "L'energia rinnovabile in NI raggiunge un livello record",
+      "link": "https://www.bbc.co.uk/news/articles/ce3rql5rzx4o?at_medium=RSS&at_campaign=rss",
+      "fonte": "BBC Science",
+      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
+      "data": "04/09/2026",
       "categoria": "Scienza & Tech",
-      "sommario": "Gli scienziati che seguono migliaia di animali hanno scoperto che la nostra presenza fisica può rimodellarsi dove la fauna selvatica si muove e vive, a volte con la stessa forza di strade, città,..."
+      "sommario": "E per la prima volta da gennaio la produzione da fonti rinnovabili ha costantemente superato quella da fonti non rinnovabili."
     },
     {
       "titolo": "Cumuli di rifiuti e disordine alla Capanna Carrel sul Cervino: l’amara scoperta delle Guide Alpine sull’inciviltà ad alta quota",
