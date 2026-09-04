@@ -1,7 +1,34 @@
 {
-  "citazione": "Il sorriso è la curva che raddrizza ogni cosa. 😊",
+  "citazione": "Fai un respiro profondo. Tutto andrà bene. 🌿",
   "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
   "notizie": [
+    {
+      "titolo": "Nel borgo di Nemi torna la Lucciolata: corteo di luci lungo il lago per la tutela dei Castelli Romani",
+      "link": "https://www.greenme.it/ambiente/eventi-e-iniziative/nel-borgo-di-nemi-torna-la-lucciolata-corteo-di-luci-lungo-il-lago-per-la-tutela-dei-castelli-romani/",
+      "fonte": "GreenMe",
+      "immagine": "https://www.greenme.it/wp-content/uploads/2026/09/lago-nemi-sera.jpg",
+      "data": "04/09/2026",
+      "categoria": "Mondo",
+      "sommario": "Nemi, il 5 settembre torna la Lucciolata: corteo serale lungo il lago per la tutela di acqua, boschi e territorio."
+    },
+    {
+      "titolo": "Il rilevatore di materia oscura trova uno strano segnale che gli scienziati non possono ancora spiegare",
+      "link": "https://www.sciencedaily.com/releases/2026/09/260904000313.htm",
+      "fonte": "Science Daily",
+      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+      "data": "04/09/2026",
+      "categoria": "Scienza & Tech",
+      "sommario": "L'esperimento LUX-ZEPLIN ha rilevato una rara interazione di particelle che sembra insolitamente difficile da spiegare come normale rumore di fondo ed è apparsa dove ..."
+    },
+    {
+      "titolo": "Nelle profondità di Marte, gli scienziati trovano un vasto sistema di magma nascosto",
+      "link": "https://www.sciencedaily.com/releases/2026/09/260901070529.htm",
+      "fonte": "Science Daily",
+      "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
+      "data": "04/09/2026",
+      "categoria": "Scienza & Tech",
+      "sommario": "Nelle profondità di Marte, gli scienziati hanno trovato prove di enormi sistemi magmatici che una volta si pensava richiedessero una tettonica a placche simile alla Terra. Le misure sismiche suggeriscono..."
+    },
     {
       "titolo": "Il cielo diventa rosso all’improvviso prima del violento temporale: cosa è successo in Cina e come se lo spiega la Nasa",
       "link": "https://www.greenme.it/ambiente/meteo/il-cielo-diventa-rosso-allimprovviso-prima-del-violento-temporale-cosa-e-successo-in-cina-e-come-se-lo-spiega-la-nasa/",
