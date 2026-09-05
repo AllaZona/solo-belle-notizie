@@ -1,15 +1,24 @@
 {
-  "citazione": "Ogni giorno è una nuova opportunità. 🌅",
-  "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
+  "citazione": "Sii gentile con te stesso oggi. Te lo meriti. ✨",
+  "curiosita": "In Svezia esiste la 'Fika': prendersi una pausa caffè per godersi le cose belle della vita.",
   "notizie": [
     {
-      "titolo": "Il suolo rosso dell'Australia potrebbe nascondere un'enorme fonte di energia pulita",
-      "link": "https://www.sciencedaily.com/releases/2026/08/260829035214.htm",
-      "fonte": "Science Daily",
+      "titolo": "Gli schienali di beneficenza richiedono una protezione della guarnizione di riposo",
+      "link": "https://www.bbc.co.uk/news/articles/c4g58ylj735o?at_medium=RSS&at_campaign=rss",
+      "fonte": "BBC Science",
       "immagine": "https://images.unsplash.com/photo-1499209974431-9dddcece7f88?w=800&q=80",
-      "data": "29/08/2026",
+      "data": "05/09/2026",
+      "categoria": "Società",
+      "sommario": "Il Seal Research Trust sostiene le richieste di considerare il disturbo intenzionale dei sigilli un reato."
+    },
+    {
+      "titolo": "Chiediamo di dare ai sigilli del Tamigi spazio per la sicurezza di tutti",
+      "link": "https://www.bbc.co.uk/news/articles/c624x0l9dvgo?at_medium=RSS&at_campaign=rss",
+      "fonte": "BBC Science",
+      "immagine": "https://images.unsplash.com/photo-1470071131384-001b85755536?w=800&q=80",
+      "data": "05/09/2026",
       "categoria": "Scienza & Tech",
-      "sommario": "I ricercatori hanno scoperto che le rocce ricche di ferro dell'Australia occidentale possono generare naturalmente idrogeno e che il processo può essere potenziato per produrre molto più grandi..."
+      "sommario": "Avvicinarsi troppo agli animali avvistati lungo il Tamigi può essere dannoso sia per loro che per il pubblico, afferma un ente di beneficenza."
     },
     {
       "titolo": "L'antica scoperta di arte rupestre suggerisce che i primi umani conosciuti in Irlanda arrivarono dal Galles",
