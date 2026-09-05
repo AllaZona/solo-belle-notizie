@@ -1,7 +1,25 @@
 {
   "citazione": "Fai un respiro profondo. Tutto andrà bene. 🌿",
-  "curiosita": "I macachi giapponesi fanno le palle di neve solo per il gusto di giocarci.",
+  "curiosita": "In Svezia esiste la 'Fika': prendersi una pausa caffè per godersi le cose belle della vita.",
   "notizie": [
+    {
+      "titolo": "Il suolo rosso dell'Australia potrebbe nascondere un'enorme fonte di energia pulita",
+      "link": "https://www.sciencedaily.com/releases/2026/08/260829035214.htm",
+      "fonte": "Science Daily",
+      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+      "data": "29/08/2026",
+      "categoria": "Scienza & Tech",
+      "sommario": "I ricercatori hanno scoperto che le rocce ricche di ferro dell'Australia occidentale possono generare naturalmente idrogeno e che il processo può essere potenziato per produrre molto più grandi..."
+    },
+    {
+      "titolo": "L'antica scoperta di arte rupestre suggerisce che i primi umani conosciuti in Irlanda arrivarono dal Galles",
+      "link": "https://www.bbc.co.uk/news/articles/c5y75dl0jpko?at_medium=RSS&at_campaign=rss",
+      "fonte": "BBC Science",
+      "immagine": "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
+      "data": "04/09/2026",
+      "categoria": "Scienza & Tech",
+      "sommario": "Durante la più recente era glaciale, i ricercatori ritengono che ci fosse un \"ponte di terra perduto\" tra il Galles e l'Irlanda."
+    },
     {
       "titolo": "Nel borgo di Nemi torna la Lucciolata: corteo di luci lungo il lago per la tutela dei Castelli Romani",
       "link": "https://www.greenme.it/ambiente/eventi-e-iniziative/nel-borgo-di-nemi-torna-la-lucciolata-corteo-di-luci-lungo-il-lago-per-la-tutela-dei-castelli-romani/",
@@ -235,15 +253,6 @@
       "data": "30/08/2026",
       "categoria": "Mondo",
       "sommario": "In Nepal la situazione è ancora critica e a tratti disastrosa: un lago di sbarramento, con una quantità d’acqua sufficiente a riempire circa 1.000 piscine ol..."
-    },
-    {
-      "titolo": "Il suolo rosso dell'Australia potrebbe nascondere un'enorme fonte di energia pulita",
-      "link": "https://www.sciencedaily.com/releases/2026/08/260829035214.htm",
-      "fonte": "Science Daily",
-      "immagine": "https://images.unsplash.com/photo-1506126613408-eca07ce68773?w=800&q=80",
-      "data": "29/08/2026",
-      "categoria": "Scienza & Tech",
-      "sommario": "I ricercatori hanno scoperto che le rocce ricche di ferro dell'Australia occidentale possono generare naturalmente idrogeno e che il processo può essere potenziato per produrre molto più grandi..."
     }
   ]
 }
